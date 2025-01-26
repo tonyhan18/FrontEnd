@@ -25,24 +25,31 @@
   <body>
     <h1 class="display-1">Image & Figure</h1>
 
+    <!-- 이미지를 조절-->
     <div id="figure" class="container">
-      <!-- Image Fluid -->
-      <img src="https://via.placeholder.com/2000x600" alt="..." />
+      <!-- Image Fluid : 부모클래스에 맞게 이미지에 변형 -->
+      <img class="img-fluid" src="https://greenevilletheatreguild.org/wp-content/uploads/banner-2000x600.jpg" alt="..." />
 
       <br /><br />
 
-      <!-- Image thumbnail -->
-      <img src="https://via.placeholder.com/120" alt="..." width="200px" />
+      <!-- Image thumbnail 
+      이미지의 경계가 둥그러지고 흰선들이 생기었다
+      -->
+      <img class="img-thumbnail" src="https://img.danawa.com/prod_img/500000/201/592/img/1592201_1.jpg?shrink=330:*&_v=20151031063217" alt="..." width="200px" />
 
       <br /><br />
 
       <!-- Image Rounded -->
-      <img src="https://via.placeholder.com/120" alt="..." width="200px" />
+      <img class="rounded" src="https://img.danawa.com/prod_img/500000/201/592/img/1592201_1.jpg?shrink=330:*&_v=20151031063217" alt="..." width="200px" />
 
       <br /><br />
 
       <!-- Figure Image -->
-      <img src="https://via.placeholder.com/400x200" class="img-fluid rounded" alt="..." />
+      <figure class="figure">
+        <img class="img-fluid rounded figure-img" src="https://thorntons-investments.co.uk/wp-content/uploads/2017/08/400x200.png" alt="..." />
+        <figcaption class="figure-caption text-end">A caption for the above image</figcaption>
+      </figure>
+      
     </div>
 
     <!-- Bootstrap JS -->

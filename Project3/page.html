@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page | My 3rd website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css" integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body class="page">
+  <a id="scrolltoTop" class="shadow-xl">Top</a>
+  <div class="modal fade" id="navbarModalContent" aria-labelledby="navbarModalContent" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="navbarModalContentLabel">My Website</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-lable="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-unstyled mobile-menu">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="intro.html">Intro</a>
+            </li>
+            <li class="active">
+              <a href="#">Page</a>
+              <ul class="list-unstyled mobile-submenu">
+                <li>
+                  <a href="page.html" class="current">Page 1</a>
+                </li>
+                <li>
+                  <a href="page.html">Page 2</a>
+                </li>
+                <li>
+                  <a href="page.html">Page 3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="#">Project</a>
+              <ul class="list-unstyled mobile-submenu">
+                <li>
+                  <a href="project.html">Project 1</a>
+                </li>
+                <li>
+                  <a href="project.html">Project 2</a>
+                </li>
+                <li>
+                  <a href="project.html">Project 3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="reservation.html">Reservation</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Navbar -->
+  <nav id="primary-navbar" class="navbar navbar-expand-lg navbar-transparent fixed-top rgba-black-light">
+    <div class="container-xxl">
+      <a class="navbar-brand text-white" href="index.html" data-bs-toggle="tooltip" data-bs-placement="bottom" title="This is my Website">
+        <img src="assets/images/bootstrap-logo.png" alt="My Logo" width="60px"> My website
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#navbarModalContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i><p>Home</p></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="intro.html"><i class="fa fa-info fa-lg"></i><p>Intro</p></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-book-open fa-lg"></i><p>Page</p>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="page.html">Action</a></li>
+              <li><a class="dropdown-item" href="page.html">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="page.html">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link"><i class="fa fa-rss fa-lg"></i><p>Blog</p></a>
+          </li>
+          <li class="nav-item dropdown dropdown-wide">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa fa-th-large fa-lg"></i><p>Project</p>
+            </a>
+            <div class="dropdown-menu w-75" aria-labelledby="navbarDropdown">
+              <div class="container-fluid py-4" id="mega-menu">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <h5><strong class="text-danger">Project title</strong></h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <img src="assets/images/bg_universe.jpg" alt="" class="img-fluid rounded mt-3">
+                  </div>
+                  <div class="col-lg-9">
+                    <h5><strong class="text-success">Our projects below...</strong></h5>
+                    <div class="dropdown-divider mt-3 mb-4"></div>
+                    <div class="row">
+                      <div class="col">
+                        <img src="assets/images/img1.jpg" alt="Image 1" class="img-fluid shadow-lg">
+                        <a href="page.html" class="dropdown-item">
+                          <br>
+                          <h6><strong>Project 1</strong></h6>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <img src="assets/images/img2.jpg" alt="Image 2" class="img-fluid shadow-lg">
+                        <a href="page.html" class="dropdown-item">
+                          <br>
+                          <h6><strong>Project 2</strong></h6>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <img src="assets/images/img3.jpg" alt="Image 3" class="img-fluid shadow-lg">
+                        <a href="page.html" class="dropdown-item">
+                          <br>
+                          <h6><strong>Project 3</strong></h6>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="reservation.html" class="nav-link"><i class="fa fa-desktop fa-lg"></i><p>Reservation</p></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Top Banner -->
+  <section id="topBanner" class="banner mb-0 wow fadeInDown" style="background-image: url('assets/images/img1.jpg');">
+    <div class="section-content w-75">
+      <div class="container text-center rgba-black-light py-4 text-white">
+        <h1 class="display-4">Page title</h1>
+        <hr class="hr-white">
+        <p class="lead">Page Description here. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere, velit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Page Content -->
+  <section id="page-content" class="main main-raised-square">
+    <div class="section-content">
+      <div class="container">
+        <div class="row py-5">
+          <article class="col-lg-8 mb-5 wow fadeInLeft">
+            <h3>This is heading</h3>
+            <br>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ab, maiores corrupti qui soluta quidem praesentium eligendi ullam molestiae, alias voluptates veniam quam aut odio dignissimos rerum? Asperiores, nobis quibusdam?</p>
+            <br>
+            <img src="assets/images/port1.jpg" alt="" class="img-fluid shadow-lg wow slideInLeft">
+            <br><br>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda architecto enim amet perferendis, nobis quae culpa eaque repellendus sapiente eius esse deleniti numquam ab atque. Iste provident vel voluptates et! Natus rerum magni aspernatur in neque itaque officia at consectetur.</p>
+            <br>
+            <img src="assets/images/port2.jpg" alt="" class="float-start me-3 mb-3 shadow-lg wow slideInLeft" style="width: 60%;">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, recusandae eum perferendis quia aliquid quis assumenda et doloremque tenetur blanditiis ullam cupiditate fuga aperiam! Non illo officia harum nesciunt minima vel fugiat aspernatur rerum temporibus nobis quam officiis cumque labore voluptas laboriosam, odit necessitatibus animi, provident blanditiis error voluptates ullam! Est dicta itaque neque nihil, deserunt iste, aliquid sequi perspiciatis rem ea tempore quibusdam consequuntur laborum. Quis aperiam laborum quasi nostrum sint obcaecati! Illum deserunt incidunt rem iste sunt, quis cum soluta? Inventore natus tempora, tempore incidunt ducimus eveniet maiores alias. Ad velit numquam laboriosam odit nemo quam minus reiciendis, assumenda ipsam porro quae commodi quia. Incidunt vitae magni beatae unde sequi dicta totam, illum, repellendus aut maxime animi adipisci eius quia hic mollitia fuga, explicabo ex consequuntur! Mollitia, possimus repellat. Maiores expedita libero voluptatum! Beatae, odio totam omnis sapiente aperiam corrupti dolor possimus sunt quis illum quisquam temporibus incidunt nostrum facere qui debitis? A veniam nemo, magni repellendus ullam earum suscipit, nesciunt quod aut maiores nostrum asperiores quis assumenda voluptates nihil minus voluptas aspernatur! Culpa repellat reiciendis inventore impedit eum laborum ea quisquam adipisci illum debitis dolor mollitia molestiae illo beatae hic vero exercitationem, nostrum laudantium dignissimos enim iste a quasi? Ipsum cupiditate pariatur explicabo eum temporibus amet doloribus autem consequuntur maiores, quisquam provident. Sit provident in vel mollitia, dolores libero placeat quae quasi illo itaque assumenda suscipit harum, obcaecati consectetur aspernatur reiciendis voluptatibus maiores, velit asperiores corporis debitis repellat modi facere. Nemo, omnis repellendus a quo quod qui sapiente ab consectetur harum ducimus corporis accusamus ratione, perspiciatis consequuntur voluptates, quam quae cumque error itaque reiciendis explicabo. Perferendis ex ea earum possimus dolor totam fugit non cupiditate rerum exercitationem? Repudiandae deleniti voluptatum nostrum, explicabo temporibus molestias quaerat excepturi, atque quod ipsum recusandae iste corporis est velit reiciendis tempora! Saepe.</p>
+            <br>
+            <img src="assets/images/port3.jpg" alt="" class="float-end ms-3 mb-3 shadow-lg wow slideInRight" style="width: 75%;">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus hic animi voluptas quo culpa? Eius error dolorum earum. Inventore ut nemo ab iste omnis accusamus? A modi dolorem inventore, perferendis tenetur repellendus veniam ipsam itaque quibusdam veritatis aliquid corrupti iure unde, debitis molestiae temporibus! Atque, expedita repellat nihil recusandae adipisci mollitia harum dolores alias aliquam consectetur pariatur beatae fugit minima, saepe aut quidem eius molestias. Deleniti asperiores velit alias ducimus quod adipisci quidem ut ab deserunt eum! Magni quae voluptas aspernatur laboriosam debitis repellat enim repudiandae culpa obcaecati esse dolore veniam ex, nostrum dolores nesciunt sequi dolorem maiores molestiae, illo quisquam ipsa libero. Nesciunt ducimus officiis ullam atque, ipsa repellat, eius cupiditate est at consequuntur hic quis enim cumque tempora. Suscipit laborum excepturi perferendis, sunt nulla assumenda molestias! Vel ipsam dolor distinctio culpa quae explicabo atque sapiente, voluptatibus corporis labore in cum magni, molestiae libero impedit enim nesciunt ratione ullam incidunt neque. Perferendis rerum numquam delectus quia expedita voluptatum corporis ipsa dicta fugit nam aperiam neque magnam ullam ea excepturi, quo eaque voluptatem iure, debitis commodi similique adipisci? Facere iste deleniti omnis minus placeat laudantium, unde repudiandae voluptates incidunt minima, animi error magnam nostrum earum! Voluptas repudiandae eaque aliquid odit!</p>
+            <br>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <button class="btn-close" type="button" data-bs-dismiss="alert" aria-bs-label="Close"></button>
+              <h4 class="alert-heading">Hello world</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro consectetur, inventore quos deserunt ipsam doloremque laboriosam officia neque tenetur necessitatibus?</p>
+            </div>
+          </article>
+          <aside class="col-lg-4 wow fadeInRight">
+            <div class="page-list card shadow-xl mb-4">
+              <div class="card-body bg-info">
+                <h4 class="text-white">Page Parent title</h4>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-action">
+                  <a href="page.html" class="text-muted">Page List 1</a>
+                </li>
+                <li class="list-group-item list-group-item-action">
+                  <a href="page.html" class="text-muted">Page List 2</a>
+                </li>
+                <li class="list-group-item list-group-item-action">
+                  <a href="page.html" class="text-muted">Page List 3</a>
+                </li>
+                <li class="list-group-item list-group-item-action">
+                  <a href="page.html" class="text-muted">Page List 4</a>
+                </li>
+                <li class="list-group-item list-group-item-action">
+                  <a href="page.html" class="text-muted">Page List 5</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="widget-group text-white p-4">
+              <div class="wdiget">
+                <h4 class="text-warning font-weight-bold">
+                  <i class="fas fa-map-marker-alt fa-lg me-4"></i> Find us
+                </h4>
+                <p class="ms-5 mt-3 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quidem dolore esse odit aut laudantium dolorem alias maiores voluptatibus suscipit?</p>
+              </div>
+              <div class="wdiget">
+                <h4 class="text-warning font-weight-bold">
+                  <i class="fa fa-phone fa-lg me-4"></i> Giv us a call
+                </h4>
+                <p class="ms-5 mt-3 mb-5">02-111-1111</p>
+              </div>
+              <div class="wdiget">
+                <h4 class="text-warning font-weight-bold">
+                  <i class="far fa-flie fa-lg me-4"></i> Legal information
+                </h4>
+                <p class="ms-5 mt-3 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quidem dolore esse odit aut laudantium dolorem alias maiores voluptatibus suscipit?</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Communicate -->
+  <section id="communicate">
+    <div class="section-content">
+      <div class="container">
+        <div class="row communicate-box text-white wow bounce">
+          <div class="col-8 offset-2 text-center my-5">
+            <h3>How to communicate us</h3>
+            <p class="lead my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus reiciendis vel debitis quia? Dolore consequatur nostrum aperiam. Vitae, distinctio accusantium!</p>
+          </div>
+          <div class="col-md-4 mb-5 text-center">
+            <i class="fa fa-phone fa-5x mb-3"></i>
+            <h5>02-111-1111</h5>
+            <hr class="hr-white w-50 mx-auto my-4">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, commodi hic non quis fugit quidem asperiores perferendis eligendi, in consequatur mollitia reiciendis accusamus! Corporis, quis expedita. Quaerat voluptate officia repudiandae?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi temporibus sapiente quis veritatis officia harum?</p>
+          </div>
+          <div class="col-md-4 mb-5 text-center">
+            <i class="fas fa-comments fa-5x mb-3"></i>
+            <h5>@kakaotalk ID</h5>
+            <hr class="hr-white w-50 mx-auto my-4">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, commodi hic non quis fugit quidem asperiores perferendis eligendi, in consequatur mollitia reiciendis accusamus! Corporis, quis expedita. Quaerat voluptate officia repudiandae?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi temporibus sapiente quis veritatis officia harum?</p>
+          </div>
+          <div class="col-md-4 mb-5 text-center">
+            <i class="fas fa-map-marker-alt fa-5x mb-3"></i>
+            <h5>Landmark</h5>
+            <hr class="hr-white w-50 mx-auto my-4">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, commodi hic non quis fugit quidem asperiores perferendis eligendi, in consequatur mollitia reiciendis accusamus! Corporis, quis expedita. Quaerat voluptate officia repudiandae?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi temporibus sapiente quis veritatis officia harum?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-5">
+    <div class="section-content">
+      <div class="container wow fadeInUp">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <a href="index.html" class="text-warning"><h5>My 3rd website</h5></a>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit dicta magnam eum voluptates minus optio at hic itaque nulla sed.</p>
+          </div>
+          <div class="col-md-2 mb-4 d-none d-md-block">
+            <h5>Projects</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="page.html" class="text-muted">Project 1</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Project 2</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Project 3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 mb-4 d-none d-md-block">
+            <h5>Pages</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="page.html" class="text-muted">Page 1</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Page 2</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Page 3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card card-body bg-danger">
+              <div class="card-text">
+                <div class="text-white d-flex justify-content-start">
+                  <i class="fas fa-phone fa-4x me-5"></i>
+                  <div class="icon-list-content">
+                    <div>
+                      <p class="my-0">Phone Call</p>
+                    </div>
+                    <div>
+                      <p class="lead">
+                        <a href="tel:02-111-1111" class="text-white">
+                          <strong>02-111-1111</strong>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <hr class="hr-white mt-0 mb-3">
+                <div class="text-white">
+                  <span>
+                    <i class="fa fa-envelope fa-lg me-3"></i> 
+                    <a href="mailto:jdoe@email.com" class="text-white">
+                      <strong>jdoe@email.com</strong>
+                    </a>
+                  </span>
+                </div>
+                <br>
+                <div class="text-white">
+                  <span>
+                    <i class="fa fa-home fa-lg me-3"></i> 
+                    <strong>111-11 Gil-dong, Jung-g, Seoul Korea</strong>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-5">
+      <ul class="social-icons list-unstyled d-flex justify-content-center">
+        <li class="mx-2">
+          <a href="#" class="twitter-link">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+        </li>
+        <li class="mx-2">
+          <a href="#" class="facebook-link">
+            <i class="fab fa-facebook-square fa-2x"></i>
+          </a>
+        </li>
+        <li class="mx-2">
+          <a href="#" class="youtube-link">
+            <i class="fab fa-youtube fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+      <div class="copyright text-center text-muted mt-4">
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear())
+        </script> My 3rd website. All rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js" integrity="sha512-6gudNVbNM/cVsLUMOb8g2b/RBqtQJ3aDfRFgU+5paeaCTtbYY/Dg00MzZq7r6RvJGI2KKtPBhjkHGTL/iOe21A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>

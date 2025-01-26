@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<!--
+- border
+- shadow
+
+카드적 효과를 내기 위해 border와 shadow를 사용
+Addictive(Border) : 경계선을 더해감
+Subtractive : 경계선을 빼감
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Border & Shadow</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./../style.css" />
+
+    <style>
+      .container > .row > div {
+        font-size: 50px;
+        text-align: center;
+      }
+
+      .row {
+        border: 3px solid red !important;
+      }
+
+      #border {
+        position: relative;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      #border span {
+        display: inline-block;
+        width: 8rem;
+        height: 8rem;
+        margin: 0.25rem;
+        background-color: rgb(80, 80, 80);
+      }
+
+      #border img {
+        margin-right: 0.75rem;
+      }
+
+      #border.border-style [class^='border'] {
+        border-width: 2px !important;
+      }
+
+      #shadow {
+        background-color: #fcfcfc;
+        margin-bottom: 3rem;
+        padding-top: 2rem;
+      }
+
+      #shadow > div {
+        background-color: #ffffff;
+        color: #222;
+        font-size: 2rem;
+        /* border: 1px solid #ddd; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="display-1">Border</h1>
+
+    <div class="container">
+      <h2>Addictive & Subtractive</h2>
+      <div id="border" class="border-style">
+        <span class="border"></span>
+        <span class="border-top"></span>
+        <span class="border-end"></span>
+        <span class="border-bottom"></span>
+        <span class="border-start"></span>
+      </div>
+
+      <br />
+
+      <!-- border 빼버리기 -->
+      <div id="border" class="border-style">
+        <span class="border border-0"></span>
+        <span class="border border-top-0"></span>
+        <span class="border border-end-0"></span>
+        <span class="border border-bottom-0"></span>
+        <span class="border border-start-0"></span>
+      </div>
+
+      <br /><br />
+
+      <h2>Border Color</h2>
+      <div id="border" class="border-style">
+        <span class="border border-primary"></span>
+        <span class="border border-secondary"></span>
+        <span class="border border-success"></span>
+        <span class="border border-danger"></span>
+        <span class="border border-warning"></span>
+        <span class="border border-info"></span>
+        <span class="border border-light"></span>
+        <span class="border border-dark"></span>
+        <span class="border border-white"></span>
+      </div>
+
+      <br /><br />
+
+      <h2>Border Width</h2>
+      <!-- 경계선의 두께 -->
+      <div id="border" class="border-width">
+        <span class="border border-1"></span>
+        <span class="border border-2"></span>
+        <span class="border border-3"></span>
+        <span class="border border-4"></span>
+        <span class="border border-5"></span>
+      </div>
+
+      <br /><br />
+
+      <h2>Border Radius</h2>
+      <div id="border" class="border-radius">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19aba07b-a5c4-4640-9f83-74eb48210fd5/d1snj8k-75e2bd43-74f8-4ded-8171-d82d49aa28cb.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE5YWJhMDdiLWE1YzQtNDY0MC05ZjgzLTc0ZWI0ODIxMGZkNVwvZDFzbmo4ay03NWUyYmQ0My03NGY4LTRkZWQtODE3MS1kODJkNDlhYTI4Y2IuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._l5mZiFPigXOtUGYdviExxeN3GY38rgjOJIUi-INEs0" class="rounded" alt="..." />
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19aba07b-a5c4-4640-9f83-74eb48210fd5/d1snj8k-75e2bd43-74f8-4ded-8171-d82d49aa28cb.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE5YWJhMDdiLWE1YzQtNDY0MC05ZjgzLTc0ZWI0ODIxMGZkNVwvZDFzbmo4ay03NWUyYmQ0My03NGY4LTRkZWQtODE3MS1kODJkNDlhYTI4Y2IuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._l5mZiFPigXOtUGYdviExxeN3GY38rgjOJIUi-INEs0" class="rounded-top" alt="..." />
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19aba07b-a5c4-4640-9f83-74eb48210fd5/d1snj8k-75e2bd43-74f8-4ded-8171-d82d49aa28cb.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE5YWJhMDdiLWE1YzQtNDY0MC05ZjgzLTc0ZWI0ODIxMGZkNVwvZDFzbmo4ay03NWUyYmQ0My03NGY4LTRkZWQtODE3MS1kODJkNDlhYTI4Y2IuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._l5mZiFPigXOtUGYdviExxeN3GY38rgjOJIUi-INEs0" class="rounded-end" alt="..." />
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19aba07b-a5c4-4640-9f83-74eb48210fd5/d1snj8k-75e2bd43-74f8-4ded-8171-d82d49aa28cb.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE5YWJhMDdiLWE1YzQtNDY0MC05ZjgzLTc0ZWI0ODIxMGZkNVwvZDFzbmo4ay03NWUyYmQ0My03NGY4LTRkZWQtODE3MS1kODJkNDlhYTI4Y2IuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._l5mZiFPigXOtUGYdviExxeN3GY38rgjOJIUi-INEs0" class="rounded-bottom" alt="..." />
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19aba07b-a5c4-4640-9f83-74eb48210fd5/d1snj8k-75e2bd43-74f8-4ded-8171-d82d49aa28cb.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE5YWJhMDdiLWE1YzQtNDY0MC05ZjgzLTc0ZWI0ODIxMGZkNVwvZDFzbmo4ay03NWUyYmQ0My03NGY4LTRkZWQtODE3MS1kODJkNDlhYTI4Y2IuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._l5mZiFPigXOtUGYdviExxeN3GY38rgjOJIUi-INEs0" class="rounded-start" alt="..." />
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19aba07b-a5c4-4640-9f83-74eb48210fd5/d1snj8k-75e2bd43-74f8-4ded-8171-d82d49aa28cb.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE5YWJhMDdiLWE1YzQtNDY0MC05ZjgzLTc0ZWI0ODIxMGZkNVwvZDFzbmo4ay03NWUyYmQ0My03NGY4LTRkZWQtODE3MS1kODJkNDlhYTI4Y2IuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._l5mZiFPigXOtUGYdviExxeN3GY38rgjOJIUi-INEs0" class="rounded-circle" alt="..." />
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19aba07b-a5c4-4640-9f83-74eb48210fd5/d1snj8k-75e2bd43-74f8-4ded-8171-d82d49aa28cb.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE5YWJhMDdiLWE1YzQtNDY0MC05ZjgzLTc0ZWI0ODIxMGZkNVwvZDFzbmo4ay03NWUyYmQ0My03NGY4LTRkZWQtODE3MS1kODJkNDlhYTI4Y2IuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._l5mZiFPigXOtUGYdviExxeN3GY38rgjOJIUi-INEs0" class="rounded-pill" alt="..." />
+      </div>
+
+      <br /><br />
+
+      <!-- border radius를 정해진것 이상으로 바꿀 수는 없다.
+      그 이상으로 바꿀려면 css로 직접 바꾸어야 한다.-->
+      <h2>Border Radius Sizes</h2>
+      <div id="border" class="border-radius">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19aba07b-a5c4-4640-9f83-74eb48210fd5/d1snj8k-75e2bd43-74f8-4ded-8171-d82d49aa28cb.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE5YWJhMDdiLWE1YzQtNDY0MC05ZjgzLTc0ZWI0ODIxMGZkNVwvZDFzbmo4ay03NWUyYmQ0My03NGY4LTRkZWQtODE3MS1kODJkNDlhYTI4Y2IuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._l5mZiFPigXOtUGYdviExxeN3GY38rgjOJIUi-INEs0" class="rounded-0" alt="..." />
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19aba07b-a5c4-4640-9f83-74eb48210fd5/d1snj8k-75e2bd43-74f8-4ded-8171-d82d49aa28cb.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE5YWJhMDdiLWE1YzQtNDY0MC05ZjgzLTc0ZWI0ODIxMGZkNVwvZDFzbmo4ay03NWUyYmQ0My03NGY4LTRkZWQtODE3MS1kODJkNDlhYTI4Y2IuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._l5mZiFPigXOtUGYdviExxeN3GY38rgjOJIUi-INEs0" class="rounded-1" alt="..." />
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19aba07b-a5c4-4640-9f83-74eb48210fd5/d1snj8k-75e2bd43-74f8-4ded-8171-d82d49aa28cb.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE5YWJhMDdiLWE1YzQtNDY0MC05ZjgzLTc0ZWI0ODIxMGZkNVwvZDFzbmo4ay03NWUyYmQ0My03NGY4LTRkZWQtODE3MS1kODJkNDlhYTI4Y2IuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._l5mZiFPigXOtUGYdviExxeN3GY38rgjOJIUi-INEs0" class="rounded-2" alt="..." />
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/19aba07b-a5c4-4640-9f83-74eb48210fd5/d1snj8k-75e2bd43-74f8-4ded-8171-d82d49aa28cb.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzE5YWJhMDdiLWE1YzQtNDY0MC05ZjgzLTc0ZWI0ODIxMGZkNVwvZDFzbmo4ay03NWUyYmQ0My03NGY4LTRkZWQtODE3MS1kODJkNDlhYTI4Y2IuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0._l5mZiFPigXOtUGYdviExxeN3GY38rgjOJIUi-INEs0" class="rounded-3" alt="..." />
+      </div>
+    </div>
+
+    <br /><br />
+
+    <h1 class="display-1">Shadow</h1>
+
+    <!-- css에서 box shadow와 text shadow중 하나만 적용 가능
+    부트스트랩에서는 box shadow만 적용가능 -->
+    <div id="shadow" class="container bg-light">
+      <div class="shadow-none p-3 mb-5 rounded">No shadow</div>
+      <div class="shadow-sm p-3 mb-5 rounded">Small shadow</div>
+      <div class="shadow p-3 mb-5 rounded">Regular shadow</div>
+      <div class="shadow-lg p-3 mb-5 rounded">Larger shadow</div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  </body>
+</html>

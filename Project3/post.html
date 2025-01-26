@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post title | My 3rd website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css"
+    integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+    integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body class="post">
+  <a id="scrolltoTop" class="shadow-xl">Top</a>
+  <div class="modal fade" id="navbarModalContent" aria-labelledby="navbarModalContent" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="navbarModalContentLabel">My Website</h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-lable="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="list-unstyled mobile-menu">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="intro.html">Intro</a>
+            </li>
+            <li>
+              <a href="#">Page</a>
+              <ul class="list-unstyled mobile-submenu">
+                <li>
+                  <a href="page.html">Page 1</a>
+                </li>
+                <li>
+                  <a href="page.html">Page 2</a>
+                </li>
+                <li>
+                  <a href="page.html">Page 3</a>
+                </li>
+              </ul>
+            </li>
+            <li class="active">
+              <a href="blog.html" class="current">Blog</a>
+            </li>
+            <li>
+              <a href="#">Project</a>
+              <ul class="list-unstyled mobile-submenu">
+                <li>
+                  <a href="project.html">Project 1</a>
+                </li>
+                <li>
+                  <a href="project.html">Project 2</a>
+                </li>
+                <li>
+                  <a href="project.html">Project 3</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="reservation.html">Reservation</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Navbar -->
+  <nav id="primary-navbar" class="navbar navbar-expand-lg navbar-transparent fixed-top rgba-black-light">
+    <div class="container-xxl">
+      <a class="navbar-brand text-white" href="index.html" data-bs-toggle="tooltip" data-bs-placement="bottom"
+        title="This is my Website">
+        <img src="assets/images/bootstrap-logo.png" alt="My Logo" width="60px"> My website
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="modal" data-bs-target="#navbarModalContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="fa fa-home fa-lg"></i>
+              <p>Home</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="intro.html"><i class="fa fa-info fa-lg"></i>
+              <p>Intro</p>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-book-open fa-lg"></i>
+              <p>Page</p>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="page.html">Action</a></li>
+              <li><a class="dropdown-item" href="page.html">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="page.html">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="blog.html" class="nav-link active" aria-current="page">
+              <i class="fa fa-rss fa-lg"></i>
+              <p>Blog</p>
+            </a>
+          </li>
+          <li class="nav-item dropdown dropdown-wide">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa fa-th-large fa-lg"></i>
+              <p>Project</p>
+            </a>
+            <div class="dropdown-menu w-75" aria-labelledby="navbarDropdown">
+              <div class="container-fluid py-4" id="mega-menu">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <h5><strong class="text-danger">Project title</strong></h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <img src="assets/images/bg_universe.jpg" alt="" class="img-fluid rounded mt-3">
+                  </div>
+                  <div class="col-lg-9">
+                    <h5><strong class="text-success">Our projects below...</strong></h5>
+                    <div class="dropdown-divider mt-3 mb-4"></div>
+                    <div class="row">
+                      <div class="col">
+                        <img src="assets/images/img1.jpg" alt="Image 1" class="img-fluid shadow-lg">
+                        <a href="page.html" class="dropdown-item">
+                          <br>
+                          <h6><strong>Project 1</strong></h6>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <img src="assets/images/img2.jpg" alt="Image 2" class="img-fluid shadow-lg">
+                        <a href="page.html" class="dropdown-item">
+                          <br>
+                          <h6><strong>Project 2</strong></h6>
+                        </a>
+                      </div>
+                      <div class="col">
+                        <img src="assets/images/img3.jpg" alt="Image 3" class="img-fluid shadow-lg">
+                        <a href="page.html" class="dropdown-item">
+                          <br>
+                          <h6><strong>Project 3</strong></h6>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="reservation.html" class="nav-link"><i class="fa fa-desktop fa-lg"></i>
+              <p>Reservation</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Top Banner -->
+  <section id="topBanner" class="banner mb-0 wow fadeInDown" style="background-image: url('assets/images/img3.jpg');">
+    <div class="section-content w-75">
+      <div class="container text-center rgba-black-light py-4 text-white">
+        <h1 class="display-4">Post title</h1>
+        <hr class="hr-white">
+        <p class="lead">Post Description!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Post Content -->
+  <section id="post-content" class="main main-raised-rounded">
+    <div class="section-content">
+      <div class="container-xxl">
+        <!-- Post header -->
+        <div class="row post-header py-2 mb-5 wow fadeInLeft">
+          <div class="col-sm-10 col-9">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb p-0">
+                <li class="breadcrumb-item"><a class="text-decoration-none" href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-decoration-none" href="blog.html">Blog</a></li>
+                <li class="breadcrumb-item active" aria-current="page">This is my post.</li>
+              </ol>
+            </nav>
+          </div>
+          <div class="col-sm-2 col-3">
+            <div class="float-end">
+              <i class="fas fa-arrow-circle-left fa-lg"></i>
+              <i class="fas fa-arrow-circle-right fa-lg"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Post Featured Image & Excerpt -->
+        <div class="row post-featured-meta">
+          <div class="col-lg-8 post-featured-first wow fadeInLeft">
+            <img src="assets/images/bg1.jpg" alt="" class="img-fluid shadow-xl">
+            <br>
+            <div class="post-meta mt-5 py-2">
+              <small class="text-muted mb-5">
+                <i class="fas fa-user"></i> <strong>John Doe</strong> |
+                <i class="fas fa-calendar-alt"></i> 2021-9-15 |
+                <i class="fas fa-file"></i>
+                <span class="badge badge-pill bg-warning">Category1</span> |
+                <i class="fas fa-tags"></i>
+                <span class="badge badge-pill bg-primary">Tag1, Tag2</span> |
+                <i class="fas fa-heart text-danger"></i>
+                <span>25</span>
+              </small>
+            </div>
+          </div>
+          <div class="col-lg-4 d-none d-lg-block post-featured-second wow fadeInRight">
+            <div class="post-excerpt text-warning border border-warning rgba-orange-slight lead p-4">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <br>
+            <img src="assets/images/bg2.jpg" alt="" class="second-featured-img img-fluid shadow-xl">
+          </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="row">
+          <article class="col-md-8 offset-md-2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, in placeat voluptas ut fuga facilis maxime deserunt temporibus est, sequi quos nesciunt cupiditate nobis mollitia autem, laboriosam esse laudantium excepturi perspiciatis accusantium non magnam enim ratione atque! Quas, reprehenderit itaque?</p>
+            <p class="lead my-5 text-danger">
+              Lorem ipsum dolor sit amet, <a tabindex="0" class="text-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus"
+                title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible
+                popover<u>POPOVER</u></a> consectetur adipisicing elit. Earum neque <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="This is a tooltip!"><u>numquam</u></span> facere repudiandae consequuntur modi.
+            </p>
+            <img src="assets/images/port1.jpg" alt="" class="float-end ms-3 mb-3 wow slideInRight" width="60%">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti fugiat vel reprehenderit tenetur cupiditate alias sunt, suscipit dolorem possimus repudiandae numquam aliquid iusto molestiae assumenda labore aliquam aut? Exercitationem porro vero maxime obcaecati nobis earum beatae, magni, sed, ullam sit cupiditate temporibus? Nostrum commodi maiores recusandae veritatis enim sapiente adipisci, aliquam, facere minima iusto modi nemo repudiandae, vel accusantium repellendus sint tempora laboriosam illum molestiae tenetur. Officia est mollitia non officiis odio provident sequi qui, sapiente ab iure. Quam praesentium placeat cupiditate dolorem, tempore libero distinctio fugiat animi quae beatae, eum blanditiis. Eaque consequatur quidem magni pariatur autem perspiciatis expedita beatae, dicta iure mollitia omnis quis facere culpa repellat totam laboriosam illum quae unde odio quibusdam laudantium repellendus. Ratione quaerat minima optio vel nemo. Quis fugiat recusandae modi? Ullam facere totam numquam iusto explicabo adipisci repellat sunt ex nobis asperiores? Quo nulla adipisci iusto unde, praesentium cum, repellat, distinctio vitae facere aliquam sunt perspiciatis ratione quisquam minima ut sapiente doloribus assumenda! Cumque aliquam, libero possimus deserunt cum itaque ullam magni ipsum incidunt beatae animi, id ut. Dicta voluptatibus ipsa nesciunt placeat ipsam delectus tenetur iusto, facilis sit laudantium ex eaque adipisci corrupti necessitatibus repudiandae! Molestiae sed alias ullam officia eum.</p>
+            <figure>
+              <blockquote class="blockquote">
+                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quibusdam omnis sequi, laudantium quam alias assumenda voluptatem delectus corrupti consectetur.</p>
+                <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+              </blockquote>
+            </figure>
+            <img src="assets/images/port2.jpg" alt="" class="float-start me-3 mb-3 wow slideInLeft" width="60%">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ut maxime soluta harum cupiditate, dolorum ad, consectetur reprehenderit quia, aut dolor provident iusto voluptatem? Repudiandae eveniet provident suscipit, dolorum necessitatibus possimus iusto dolores amet voluptatum velit dicta omnis eligendi fuga magnam rem temporibus officia accusamus neque voluptates dolore? Impedit asperiores nisi mollitia, distinctio modi atque praesentium! Saepe officiis quos velit mollitia fugiat. Cumque minus enim libero quod porro eum? Suscipit magnam unde placeat quas, eos eum quaerat amet commodi ipsam asperiores, obcaecati facilis laboriosam velit. Tempore autem assumenda dignissimos veniam? Pariatur voluptates ducimus alias molestias quos dolore necessitatibus perferendis tempore?</p>
+            <ul class="list-unstyled">
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+              <li>Lorem, ipsum dolor.</li>
+            </ul>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ab veniam adipisci reprehenderit modi, dignissimos enim quidem incidunt doloribus rerum nostrum architecto ad? Quae vero, explicabo illo repellendus repellat provident?</p>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">City</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>John Doe</td>
+                    <td>jdoe@email.com</td>
+                    <td>Seoul</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Sara Corner</td>
+                    <td>sara@email.com</td>
+                    <td>Gwangju</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>TH Hwang</td>
+                    <td>me@email.com</td>
+                    <td>Busan</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aut mollitia quae eos illo tempora at amet dolor blanditiis nisi facere quasi ad architecto reiciendis, libero enim ducimus ratione placeat?</p>
+            <br>
+            <br>
+
+            <div id="shadow-box" class="author-box p-4 my-4 border-light rgba-blue-grey-slight">
+              <div class="row">
+                <div class="col-12 col-sm-2 text-center">
+                  <img src="assets/images/myphoto.jpg" alt="My profile image" class="img-fluid rounded-circle shadow-xl mb-4" width="96px">
+                </div>
+                <div class="col-12 col-sm-10">
+                  <h4>
+                    <strong>Jane Doe</strong> <small>CEO. Ph.D.</small>
+                    <span class="float-end">
+                      <a href="#" class="text-muted" target="_blank">
+                        <i class="fab fa-telegram fa-lg"></i>
+                      </a>
+                      <a href="mailto:jdoe@email.com" target="_blank" class="text-muted">
+                        <i class="fas fa-envelope fa-lg"></i>
+                      </a>
+                    </span>
+                  </h4>
+                  <p>
+                    Hi~. I'm CEO Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia cumque rem qui illum, quos at eveniet nam pariatur voluptatibus magnam?
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Comments -->
+            <div id="shadow-box" class="comments py-5 my-5 border">
+              <div class="row">
+                <div class="col-md-10 mx-auto">
+                  <h3 class="text-center">4 Comments</h3>
+                  <br>
+                  <div class="d-flex">
+                    <div class="flex-shrink-0">
+                      <img src="assets/images/avatar-1.png" alt="" class="rounded-circle shadow-lg" width="64px">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <h4 class="mt-0">John Doe</h4>
+                      <p>Wonderful post. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus odit porro ab animi perspiciatis molestiae quaerat obcaecati optio exercitationem eius.</p>
+                      <div class="clearfix">
+                        <a href="#" class="btn btn-link float-end text-purple" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Reply to Comment">
+                          <i class="fas fa-paper-plane"></i> Reply
+                        </a>
+                      </div>
+
+                      <div class="d-flex">
+                        <div class="flex-shrink-0">
+                          <img src="assets/images/myphoto.jpg" alt="" class="rounded-circle shadow-lg" width="64px">
+                        </div>
+                        <div class="flex-grow-1 ms-3">
+                          <h4 class="mt-0">Jane Doe</h4>
+                          <p>Thank you. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus odit porro ab animi
+                            perspiciatis molestiae quaerat obcaecati optio exercitationem eius.</p>
+                          <div class="clearfix">
+                            <a href="#" class="btn btn-link float-end text-purple" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                              title="Reply to Comment">
+                              <i class="fas fa-paper-plane"></i> Reply
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex">
+                    <div class="flex-shrink-0">
+                      <img src="assets/images/avatar-2.png" alt="" class="rounded-circle shadow-lg" width="64px">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <h4 class="mt-0">Emily</h4>
+                      <p>Wonderful post. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus odit porro ab animi
+                        perspiciatis molestiae quaerat obcaecati optio exercitationem eius.</p>
+                      <div class="clearfix">
+                        <a href="#" class="btn btn-link float-end text-purple" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                          title="Reply to Comment">
+                          <i class="fas fa-paper-plane"></i> Reply
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex">
+                    <div class="flex-shrink-0">
+                      <img src="assets/images/avatar-1.png" alt="" class="rounded-circle shadow-lg" width="64px">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <h4 class="mt-0">James</h4>
+                      <p>Wonderful post. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus odit porro ab animi
+                        perspiciatis molestiae quaerat obcaecati optio exercitationem eius.</p>
+                      <div class="clearfix">
+                        <a href="#" class="btn btn-link float-end text-purple" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                          title="Reply to Comment">
+                          <i class="fas fa-paper-plane"></i> Reply
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <h3 class="text-center">Post your comment...</h3>
+                  <div class="d-flex my-3">
+                    <div class="flex-shrink-0">
+                      <img src="http://via.placeholder.com/64x64" alt="" class="img-fluid rounded-circle shadow-lg me-3" width="64px">
+                    </div>
+                    <div class="flex-grow-1">
+                      <textarea rows="4" class="form-control" placeholder="Write your opinions"></textarea>
+                      <div class="clearfix">
+                        <a href="#" class="btn btn-success float-end mt-3">
+                          <i class="fas fa-paper-plane"></i> Submit
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Posts -->
+  <section id="related-posts">
+    <div class="section-content">
+      <div class="container">
+        <div class="divider w-100 wow fadeInUp">
+          <h1 class="display-3 text-center text-muted my-4">Related Posts</h1>
+        </div>
+        <div class="row">
+          <div class="col-md-4 my-4 wow fadeInUp">
+            <div class="card">
+              <a href="post.html">
+                <img src="assets/images/bg1.jpg" alt="" class="image-raised img-fluid shadow-xl rounded mx-auto">
+              </a>
+              <div class="card-body">
+                <small>
+                  <span class="badge badge-pill bg-warning">Tag1, Tag2</span>
+                </small>
+                <a href="post.html">
+                  <h4 class="card-title text-purple mt-2"><strong>Post title1</strong></h4>
+                </a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur velit ut, optio ex soluta aspernatur maiores inventore tempore neque!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 my-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="card">
+              <a href="post.html">
+                <img src="assets/images/bg2.jpg" alt="" class="image-raised img-fluid shadow-xl rounded mx-auto">
+              </a>
+              <div class="card-body">
+                <small>
+                  <span class="badge badge-pill bg-warning">Tag1, Tag2</span>
+                </small>
+                <a href="post.html">
+                  <h4 class="card-title text-purple mt-2"><strong>Post title2</strong></h4>
+                </a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur velit ut, optio ex soluta aspernatur
+                  maiores inventore tempore neque!</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 my-4 wow fadeInUp" data-wow-delay="0.4s">
+            <div class="card">
+              <a href="post.html">
+                <img src="assets/images/bg3.jpg" alt="" class="image-raised img-fluid shadow-xl rounded mx-auto">
+              </a>
+              <div class="card-body">
+                <small>
+                  <span class="badge badge-pill bg-warning">Tag1, Tag2</span>
+                </small>
+                <a href="post.html">
+                  <h4 class="card-title text-purple mt-2"><strong>Post title4</strong></h4>
+                </a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consectetur velit ut, optio ex soluta aspernatur
+                  maiores inventore tempore neque!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-5">
+    <div class="section-content">
+      <div class="container wow fadeInUp">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <a href="index.html" class="text-warning">
+              <h5>My 3rd website</h5>
+            </a>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit dicta magnam eum voluptates minus
+              optio at hic itaque nulla sed.</p>
+          </div>
+          <div class="col-md-2 mb-4 d-none d-md-block">
+            <h5>Projects</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="page.html" class="text-muted">Project 1</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Project 2</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Project 3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-2 mb-4 d-none d-md-block">
+            <h5>Pages</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="page.html" class="text-muted">Page 1</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Page 2</a>
+              </li>
+              <li>
+                <a href="page.html" class="text-muted">Page 3</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card card-body bg-danger">
+              <div class="card-text">
+                <div class="text-white d-flex justify-content-start">
+                  <i class="fas fa-phone fa-4x me-5"></i>
+                  <div class="icon-list-content">
+                    <div>
+                      <p class="my-0">Phone Call</p>
+                    </div>
+                    <div>
+                      <p class="lead">
+                        <a href="tel:02-111-1111" class="text-white">
+                          <strong>02-111-1111</strong>
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <hr class="hr-white mt-0 mb-3">
+                <div class="text-white">
+                  <span>
+                    <i class="fa fa-envelope fa-lg me-3"></i>
+                    <a href="mailto:jdoe@email.com" class="text-white">
+                      <strong>jdoe@email.com</strong>
+                    </a>
+                  </span>
+                </div>
+                <br>
+                <div class="text-white">
+                  <span>
+                    <i class="fa fa-home fa-lg me-3"></i>
+                    <strong>111-11 Gil-dong, Jung-g, Seoul Korea</strong>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="my-5">
+      <ul class="social-icons list-unstyled d-flex justify-content-center">
+        <li class="mx-2">
+          <a href="#" class="twitter-link">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+        </li>
+        <li class="mx-2">
+          <a href="#" class="facebook-link">
+            <i class="fab fa-facebook-square fa-2x"></i>
+          </a>
+        </li>
+        <li class="mx-2">
+          <a href="#" class="youtube-link">
+            <i class="fab fa-youtube fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+      <div class="copyright text-center text-muted mt-4">
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear())
+        </script> My 3rd website. All rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"
+    integrity="sha512-6gudNVbNM/cVsLUMOb8g2b/RBqtQJ3aDfRFgU+5paeaCTtbYY/Dg00MzZq7r6RvJGI2KKtPBhjkHGTL/iOe21A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+    integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script type="text/javascript"
+    src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=YOUR_CLIENT_ID"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>

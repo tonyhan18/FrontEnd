@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+
+<!--
+글자의 크기와 디자인 변경
+h-* 제목에 적용
+display-* 큰 배너, 강조 텍스트
+fs-* 폰트 크기만 조절
+-->
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -45,52 +53,79 @@
 
       <br /><br />
 
+      <!-- p 태그에서도 heading 태그처럼 사용할 수 있다-->
       <div>
-        <p>h1. Bootstrap heading</p>
-        <p>h2. Bootstrap heading</p>
-        <p>h3. Bootstrap heading</p>
-        <p>h4. Bootstrap heading</p>
-        <p>h5. Bootstrap heading</p>
-        <p>h6. Bootstrap heading</p>
+        <p class="h1">h1. Bootstrap heading</p>
+        <p class="h2">h2. Bootstrap heading</p>
+        <p class="h3">h3. Bootstrap heading</p>
+        <p class="h4">h4. Bootstrap heading</p>
+        <p class="h5">h5. Bootstrap heading</p>
+        <p class="h6">h6. Bootstrap heading</p>
       </div>
 
       <br /><br />
 
+      <!-- display 클래스를 이용해서 크기를 조절할 수 있다 -->
       <div>
-        <h1>Display 1</h1>
-        <h1>Display 2</h1>
-        <h1>Display 3</h1>
-        <h1>Display 4</h1>
-        <h1>Display 5</h1>
-        <h1>Display 6</h1>
+        <h1 class="display-1">Display 1</h1>
+        <h1 class="display-2">Display 2</h1>
+        <h1 class="display-3">Display 3</h1>
+        <h1 class="display-4">Display 4</h1>
+        <h1 class="display-5">Display 5</h1>
+        <h1 class="display-6">Display 6</h1>
       </div>
 
       <br /><br />
 
       <div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, ducimus?</p>
-        <p>P-lead. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+        <!-- 부트스트랩 고유 문자 클래스 -->
+        <p class="lead">P-lead. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+
+        <!-- mark태그와 비슷하게 넣기 
+        mark = span class mark 
+        -->
         <p>You can use the mark tag to <mark>highlight</mark> text.</p>
-        <p>You can use the mark tag to <span>highlight</span> text.</p>
+        <p>You can use the mark tag to <span class="mark">highlight</span> text.</p>
+
+        <!--
+        del = span class text-decoration-line-through
+        -->
         <p><del>This line of text is meant to be treated as deleted text.</del></p>
         <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
-        <p><span>This line of text is meant to be treated as no longer accurate.</span></p>
+        <p><span class="text-decoration-line-through">This line of text is meant to be treated as no longer accurate.</span></p>
         <p><ins>This line of text is meant to be treated as an addition to the document.</ins></p>
+
+        <!--
+        u = span class text-decoration-underline
+        -->
         <p><u>This line of text will render as underlined.</u></p>
-        <p><span>This line of text will render as underlined.</span></p>
+        <p><span class="text-decoration-underline">This line of text will render as underlined.</span></p>
+        
+        <!--
+        small = span class small
+        strong = span class fw-bold
+        -->
         <p><small>This line of text is meant to be treated as fine print.</small></p>
-        <p><span>This line of text is meant to be treated as fine print.</span></p>
+        <p><span class="small">This line of text is meant to be treated as fine print.</span></p>
         <p><strong>This line rendered as bold text.</strong></p>
-        <p><b>This line rendered as bold text.</b></p>
+        <p><b class="fw-bold">This line rendered as bold text.</b></p>
         <p>This line rendered as bold text.</p>
+
+        <!--
+        i = p class fst-italic
+        -->
         <p><em>This line rendered as italicized text.</em></p>
         <p><i>This line rendered as italicized text.</i></p>
-        <p>This line rendered as italicized text.</p>
+        <p class="fst-italic">This line rendered as italicized text.</p>
       </div>
 
       <br /><br />
 
-      <ul>
+      <!--
+      리스트 마크 없애기
+      -->
+      <ul class="list-unstyled">
         <li>Lorem ipsum dolor sit amet</li>
         <li>Consectetur adipiscing elit</li>
         <li>Integer molestie lorem at massa</li>
