@@ -45,12 +45,8 @@ SlickCarousel : https://cdnjs.com/libraries/slick-carousel
             <!-- 그냥 부트스트랩에 있는 토글러
             그냥 그대로 사용하면 열고서 안 접힌다 
             -->
-            <button class="navbar-toggler" 
-                type="button" 
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" 
-                aria-controls="navbarSupportedContent" 
-                aria-expanded="false"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -102,25 +98,30 @@ SlickCarousel : https://cdnjs.com/libraries/slick-carousel
     </nav>
 
     <section id="top">
+        <!-- 
+        전체적인 위치 조절 : d-flex(필수) + justify-content + align-items
+        -->
         <div class="section-content overlay d-flex justify-content-center align-items-center">
             <div class="container-xxl">
                 <div class="row align-items-center">
-                    <div class="col-md-9">
-                        <h1 class="welcome-title fw-light">Welcome to <span class="text-warning fw-bold">my first website</span>.
+                    <div class="col-md-9 welcome">
+                        <h1 class="welcome-title fw-light">Welcome to <span class="text-warning fw-bold">my first
+                                website</span>.
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quae.</h1>
                         <div class="divider"></div>
                         <div class="row">
-                            <p class="col lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-                            error sint nihil ex ab nisi nulla totam omnis beatae provident?</p>
-                            <p class="col">
+                            <p class="col-sm-10 col-md-12 lead">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                elit. Quaerat
+                                error sint nihil ex ab nisi nulla totam omnis beatae provident?</p>
+                            <p class="col-sm-2 col-md-12">
                                 <a href="#" class="btn btn-primary">Read more</a>
                             </p>
                         </div>
                     </div>
                     <!-- 한 공간에서도 콘텐츠를 나누고자 할때 row-col 사용-->
                     <div class="col-md-3 d-none d-md-block letsgo">
-                        <div class="card">
-                            <div class="card-body">
+                        <div class="card card-body">
+                            <div class="letsgo my-3">
                                 <h4 class="card-title">Easy contact!</h4>
                                 <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
                                     tempora.</p>
@@ -151,17 +152,99 @@ SlickCarousel : https://cdnjs.com/libraries/slick-carousel
         </div>
     </section>
 
+    <!--
+    앞부분과는 다르게 위치가 정해져 있지 않아 position-relative를 사용한다.
+    -->
+    <section id="intro">
+        <div class="section-content">
+
+            <div class="container intro">
+                <div class="row">
+                    <div class="col-md-6 intro-first">
+                        <div class="row px-md-3">
+                            <div class="col-6">
+                                <div class="card card-body
+                                my-3
+                                position-relative intro-first-card">
+                                    <div class="
+                                    overlay position-absolute h-100 w-100
+                                    d-flex justify-content-center align-items-center
+                                    shadow-lg">
+                                        <h3 class="fw-light">
+                                            <a href="#" class="link-light text-decoration-none">Link 1</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card card-body my-3 position-relative intro-first-card">
+                                    <div class="
+                                    overlay position-absolute h-100 w-100
+                                    d-flex justify-content-center align-items-center
+                                    shadow-lg">
+                                        <h3 class="fw-light">
+                                            <a href="#" class="link-light text-decoration-none">Link 2</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card card-body my-3 position-relative intro-first-card">
+                                    <div class="
+                                    overlay position-absolute h-100 w-100
+                                    d-flex justify-content-center align-items-center
+                                    shadow-lg">
+                                        <h3 class="fw-light">
+                                            <a href="#" class="link-light text-decoration-none">Link 3</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card card-body my-3 position-relative intro-first-card">
+                                    <div class="
+                                    overlay position-absolute h-100 w-100
+                                    d-flex justify-content-center align-items-center
+                                    shadow-lg">
+                                        <h3 class="fw-light">
+                                            <a href="#" class="link-light text-decoration-none">Link 4</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 intro-second">
+                        <h5 class="fw-light">Greetings!</h5>
+                        <h1 class="mb-5">Introduce our website</h1>
+                        <div class="intro-text">
+                            <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum recusandae
+                                praesentium
+                                consectetur eum quis odit! Minima, eum non vero dolores adipisci quia sint voluptatem
+                                doloribus ullam
+                                cum voluptas deserunt nostrum!</p>
+                            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae expedita
+                                veniam error
+                                architecto est labore maiores distinctio, hic sint! Error.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- BootStrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
-    </script>
+        </script>
 
     <!-- SlickCarousel : slick.min.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
