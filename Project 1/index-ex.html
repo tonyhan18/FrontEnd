@@ -102,27 +102,48 @@ SlickCarousel : https://cdnjs.com/libraries/slick-carousel
     </nav>
 
     <section id="top">
-        <div class="section-content d-flex justify-content-center align-items-center">
+        <div class="section-content overlay d-flex justify-content-center align-items-center">
             <div class="container-xxl">
                 <div class="row align-items-center">
-                    <div class="col">
+                    <div class="col-md-9">
                         <h1 class="welcome-title fw-light">Welcome to <span class="text-warning fw-bold">my first website</span>.
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quae.</h1>
                         <div class="divider"></div>
                         <div class="row">
-                            <p class="col-col">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-                error sint nihil ex ab nisi nulla totam omnis beatae provident?
-                            </p>
+                            <p class="col lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat
+                            error sint nihil ex ab nisi nulla totam omnis beatae provident?</p>
                             <p class="col">
                                 <a href="#" class="btn btn-primary">Read more</a>
                             </p>
                         </div>
                     </div>
                     <!-- 한 공간에서도 콘텐츠를 나누고자 할때 row-col 사용-->
-                    <div class="col d-none d-md-block letsgo">
+                    <div class="col-md-3 d-none d-md-block letsgo">
                         <div class="card">
-                            <div class="card-body"></div>
+                            <div class="card-body">
+                                <h4 class="card-title">Easy contact!</h4>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+                                    tempora.</p>
+                            </div>
+                            <div class="letsgo-card-form">
+                                <form>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" placeholder="Your name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input type="tel" class="form-control" placeholder="Your phone">
+                                    </div>
+                                    <div class="form-check mb-3">
+                                        <input type="text" class="form-check-input" id="flexCheckDefault">
+                                        <label for="flexCheckDefault" class="form-check-label">
+                                            I agree to provide privacy
+                                        </label>
+                                    </div>
+                                    <p class="mb-3">
+                                        <button class="btn btn-primary w-100">Submit</button>
+                                    </p>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
