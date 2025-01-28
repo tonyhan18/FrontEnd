@@ -69,8 +69,10 @@ container > row > col 조합
     <br>
 
     <!-- container-fluid -->
-    <!-- 항상 화면 꽉차게 -->
-    <div class="container-fluid">
+    <!-- 항상 화면 꽉차게
+    대신 container-fluid는 자체 마진과 패딩이 있어서 m-0, p-0 을 함께 넣어주어야 한다. 
+    -->
+    <div class="container-fluid mb-0 px-0">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto corporis quia similique voluptatibus, iure
       doloremque
       sint modi sit adipisci natus, officiis accusantium quasi itaque et magnam corrupti beatae optio debitis!
@@ -245,7 +247,11 @@ container > row > col 조합
         <br>
         justify-content와 align-items를 적절히 활용하자<br>
         (이 둘은 d-flex, row와 함께 있어야만 동작한다)<br>
-
+        - justify-content : 가로 정렬<br>
+        - align-items : 세로 정렬<br>
+        <br>
+        정렬이 안되는거 같다거나 블록 크기가 부족하다면 <br>
+        w-100 혹은 h-100을 이용해서 충분한 공간 확보후 사용하기<br>
       </h5>
     </div>
     <!-- JUSTIFY-CONTENT -->
