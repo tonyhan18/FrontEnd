@@ -1,3 +1,12 @@
+/* GLOBAL SETTINGs */
+.divider
+{
+  width: 100%;
+  margin-top: 2rem;
+  border-top: 10px solid #000 ;
+}
+
+
 body {
   background-color: #8e24aa;
   color: #fff;
@@ -52,4 +61,40 @@ body h1.display-1 {
 
 .container-xxl {
   border: 10px solid #4caf50;
+}
+
+
+/********** GRID **********/
+#GRID .container>.row>div {
+  font-size: 50px;
+  text-align: center;
+}
+
+
+/********** COLUMNS & GUTTERS **********/
+#COLANDGUT .container>.row>div {
+  font-size: 50px;
+  text-align: center;
+}
+
+#COLANDGUT .row {
+  border: 3px solid red !important;
+}
+
+#COLANDGUT section {
+  border: 2px solid #ddd;
+}
+
+#COLANDGUT #align-items .row,
+#COLANDGUT #align-self .row {
+  height: 500px;
+}
+
+#RORDERANDOFFSET .container>.row>div {
+  font-size: 50px;
+  text-align: center;
+}
+
+#RORDERANDOFFSET .row {
+  border: 3px solid red !important;
 }

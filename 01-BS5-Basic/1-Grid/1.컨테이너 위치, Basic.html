@@ -34,171 +34,477 @@ container > row > col 조합
   <link rel="stylesheet" href="./../style.css">
 
   <style>
-    .container>.row>div {
-      font-size: 50px;
-      text-align: center;
-    }
+
   </style>
 
 </head>
 
 <body>
-  <h1 class="display-1">Grid</h1>
+  <section class="GRID">
+    <h1 class="display-1">CH1. Grid</h1>
 
-  <!-- 
-    Break point
-    xs: < 576px,
-    sm: >= 576px,
-    md: >= 768px,
-    lg: >= 992px,
-    xl: >= 1200px,
-    xxl: >= 1400px 
+    <div class="container">
+      <h5>
+        Grid에서는 전반적인 레이아웃을 구성하는 방법에 대해서 배울 수 있다.<br>
+        <br>
+        - Break point<br>
+        - xs: < 576px,<br>
+          - sm: >= 576px(Default),<br>
+          - md: >= 768px,<br>
+          - lg: >= 992px,<br>
+          - xl: >= 1200px,<br>
+          - xxl: >= 1400px <br>
+          <br>
+          화면 크기에 따라 맞추어지는 사이즈가 달라진다.<br>
+          </h4>
+    </div>
+    <!-- container -->
+    <div class="container">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione ipsam
+      repellendus
+      beatae.
+      Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
+    </div>
+
+    <br>
+
+    <!-- container-fluid -->
+    <!-- 항상 화면 꽉차게 -->
+    <div class="container-fluid">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto corporis quia similique voluptatibus, iure
+      doloremque
+      sint modi sit adipisci natus, officiis accusantium quasi itaque et magnam corrupti beatae optio debitis!
+    </div>
+
+    <br>
+
+    <!-- container-sm -->
+    <div class="container-sm">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione ipsam
+      repellendus
+      beatae.
+      Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
+    </div>
+
+    <br>
+
+    <!-- container-md -->
+    <div class="container-md">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione ipsam
+      repellendus
+      beatae.
+      Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
+    </div>
+
+    <br>
+
+    <!-- container-lg -->
+    <div class="container-lg">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione ipsam
+      repellendus
+      beatae.
+      Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
+    </div>
+
+    <br>
+
+    <!-- container-xl -->
+    <div class="container-xl">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione ipsam
+      repellendus
+      beatae.
+      Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
+    </div>
+
+    <br>
+
+    <!-- container-xxl -->
+    <div class="container-xxl">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione ipsam
+      repellendus
+      beatae.
+      Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
+    </div>
+
+    <br><br>
+
+    <h1 class="display-1">Grid System</h1>
+    <div class="container">
+      <h5>
+        Grid system은 12개의 column으로 이루어져 있음<br>
+        한 행은 `ROW`로 표현하고<br>
+        한 열은 `COL`로 표현함<br>
+        <br>
+        이때 `row-cols-*`를 사용하면 한 행에 표시할 column의 개수를 지정할 수 있음<br>
+      </h5>
+    </div>
+
+    <div class="container">
+      <!-- 일반적인 사이즈에서는 12개까지 표현된다.-->
+      <div class="row">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+        <div class="col">5</div>
+        <div class="col">6</div>
+        <div class="col">7</div>
+        <div class="col">8</div>
+        <div class="col">9</div>
+        <div class="col">10</div>
+        <div class="col">11</div>
+        <div class="col">12</div>
+      </div>
+
+      <!-- 숫자를 적어 넣어서 특정 행이 많은 칸을 차지하도록 만들 수도 있다. -->
+      <div class="row">
+        <div class="col">1</div>
+        <div class="col-6">2</div>
+        <div class="col">3</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- 화면 크기에 맞추어 차지하고 있는 칸을 바꿀 수 있다.-->
+      <!-- col, col-sm, col-md, col-lg, col-xl, col-xxl -->
+      <div class="row">
+        <div class="col-xxl">1</div>
+        <div class="col-xxl">2</div>
+        <div class="col-xxl">3</div>
+      </div>
+
+      <div class="row">
+        <div class="col-xl-2 col-md col-sm-4">1</div>
+        <div class="col-xl-6 col-md-6 col-sm-4">2</div>
+        <div class="col-xl-4 col-md col-sm-4">3</div>
+      </div>
+
+      <!-- col-*-auto : Variable width content -->
+      <div class="row">
+        <div class="col-lg-2">1</div>
+        <div class="col-md-auto">2 Lorem ipsum dolor sit amet.</div>
+        <div class="col-lg-2">3</div>
+      </div>
+
+      <div class="divider"></div>
+      <!-- 한 열에 놓을 수 있는 블록의 수를 설정할 수 있다. -->
+      <!-- Row Column : row-cols-* -->
+      <div class="row row-cols-4">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+        <div class="col">5</div>
+      </div>
+
+      <div class="row row-cols-3">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+      </div>
+
+      <!-- row-cols-auto로 두면 최대 개수 제한을 없앨 수 있다.
+     내용 크기에 따라 자동으로 크기가 정해진다.-->
+      <div class="row row-cols-auto">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+      </div>
+
+      <!-- 블록중 하나가 너무 크면 무너질 수 레이아웃이 무너질 수 있다. -->
+      <div class="row row-cols-4">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col-6">3</div>
+        <div class="col">4</div>
+      </div>
+
+      <!-- 화면 크기에 따라 블록의 숫자를 조절할 수도 있다. -->
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="divider"></div>
+  <br><br>
+
+
+
+  <section id="COLANDGUT">
+    <h1 class="display-1">CH2. 전체적인 컨텐츠 위치(COLUMNS & GUTTERS)</h1>
+    <div class="container">
+      <h5>
+        COLUMNS & GUTTERS에서는 내부 컨텐츠의 간격을 조절하는 방법에 대해서 배울 수 있다.<br>
+        <br>
+        justify-content와 align-items를 적절히 활용하자<br>
+        (이 둘은 d-flex, row와 함께 있어야만 동작한다)<br>
+
+      </h5>
+    </div>
+    <!-- JUSTIFY-CONTENT -->
+    <div id="justify-content" class="container">
+      <h1 class="display-1">Justify content</h1>
+      <br>
+      <!-- justify-content-center -->
+      <div class="row justify-content-center">
+        <div class="col-2">1</div>
+        <div class="col-2">2</div>
+        <div class="col-2">3</div>
+      </div>
+      <br>
+      <!-- justify-content-start -->
+      <div class="row justify-content-start">
+        <div class="col-2">1</div>
+        <div class="col-2">2</div>
+        <div class="col-2">3</div>
+      </div>
+      <br>
+      <!-- justify-content-end -->
+      <div class="row justify-content-end">
+        <div class="col-2">1</div>
+        <div class="col-2">2</div>
+        <div class="col-2">3</div>
+      </div>
+      <br>
+      <!-- justify-content-between -->
+      <div class="row justify-content-between">
+        <div class="col-2">1</div>
+        <div class="col-2">2</div>
+        <div class="col-2">3</div>
+      </div>
+      <br>
+      <!-- justify-content-around -->
+      <div class="row justify-content-around">
+        <div class="col-2">1</div>
+        <div class="col-2">2</div>
+        <div class="col-2">3</div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- ALIGN ITEMS -->
+    <div id="align-items" class="container">
+      <h1 class="display-1">Align items</h1>
+      <br>
+      <!-- align-items-center -->
+      <div class="row align-items-center">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+      </div>
+      <br>
+      <div class="row align-items-start">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+      </div>
+      <br>
+      <div class="row align-items-end">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <!-- 
+  ALIGN SELF 
+  - 특정 자식요소만 따로 정렬하고 싶을때 사용한다.
   -->
+    <div id="align-self" class="container">
+      <h1 class="display-1">Align Self</h1>
+      <br>
+      <div class="row align-items-center">
+        <div class="col align-self-start">1</div>
+        <div class="col align-self-center">2</div>
+        <div class="col align-self-end">3</div>
+      </div>
+    </div>
 
-  <!-- container -->
-  <!-- 화면 크기에 따라 자동으로 최대 너비-->
-  <div class="container">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione ipsam repellendus
-    beatae.
-    Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
-  </div>
+    <br>
+    <br>
 
-  <br>
+    <!-- Gutters -->
+    <h1 class="display-1">Gutters</h1>
 
-  <!-- container-fluid -->
-  <!-- 항상 화면 꽉차게 -->
-  <div class="container-fluid">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto corporis quia similique voluptatibus, iure
-    doloremque
-    sint modi sit adipisci natus, officiis accusantium quasi itaque et magnam corrupti beatae optio debitis!
-  </div>
+    <!-- gx gy 1 to 5 : px-4 or overflow-hidden  / g-0 : no-gutters -->
+    <div class="container px-4">
+      <div class="row gx-5">
+        <div class="col">
+          <section>1</section>
+        </div>
+        <div class="col">
+          <section>2</section>
+        </div>
+      </div>
+    </div>
 
-  <br>
+    <br>
 
-  <!-- container-sm -->
-  <div class="container-sm">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione ipsam repellendus
-    beatae.
-    Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
-  </div>
+    <div class="container overflow-hidden">
+      <div class="row g-3">
+        <div class="col-6">
+          <section>1</section>
+        </div>
+        <div class="col-6">
+          <section>2</section>
+        </div>
+        <div class="col-6">
+          <section>3</section>
+        </div>
+        <div class="col-6">
+          <section>4</section>
+        </div>
+      </div>
+    </div>
 
-  <br>
+    <br>
 
-  <!-- container-md -->
-  <div class="container-md">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione ipsam repellendus
-    beatae.
-    Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
-  </div>
-
-  <br>
-
-  <!-- container-lg -->
-  <div class="container-lg">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione ipsam repellendus
-    beatae.
-    Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
-  </div>
-
-  <br>
-
-  <!-- container-xl -->
-  <div class="container-xl">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione ipsam repellendus
-    beatae.
-    Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
-  </div>
-
-  <br>
-
-  <!-- container-xxl -->
-  <div class="container-xxl">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, tenetur animi debitis quod ratione ipsam repellendus
-    beatae.
-    Atque, nostrum corporis magnam debitis minus nulla quibusdam deleniti earum qui ducimus consequatur?
-  </div>
+    <!-- Multiple gutters -->
+    <div class="container overflow-hidden">
+      <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+        <div class="col">
+          <section>1</section>
+        </div>
+        <div class="col">
+          <section>2</section>
+        </div>
+        <div class="col">
+          <section>3</section>
+        </div>
+        <div class="col">
+          <section>4</section>
+        </div>
+        <div class="col">
+          <section>5</section>
+        </div>
+        <div class="col">
+          <section>6</section>
+        </div>
+        <div class="col">
+          <section>7</section>
+        </div>
+        <div class="col">
+          <section>8</section>
+        </div>
+        <div class="col">
+          <section>9</section>
+        </div>
+        <div class="col">
+          <section>10</section>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <br><br>
 
-  <!-- Grids -->
+  <section id="RORDERANDOFFSET">
+    <h1 class="display-1">CH3. 세부적인 컨텐츠 위치(REORDERING & OFFSET)</h1>
+    <div class="container">
+      <h5>
+        앞에서는 전체적인 컨텐츠의 위치를 조절하는 방법에 대해서 배웠다면<br>
+        이번에는 세부적인 컨텐츠의 위치를 조절하는 방법에 대해서 배울 수 있다.<br>
+
+        <br>
+        - column break는 다음 컬럼을 새로운 줄로 넘기는 방법이다.<br>
+        - order은 순서를 정한다. order class가 있는 블록 끼리 정렬된다.<br>
+        - offset class가 있는 블록은 시작 순서를 뒤로 미룬다.<br>
+      </h5>
+    </div>
+
+     <!-- Column Break -->
   <div class="container">
-
-    <!-- col, col-sm, col-md, col-lg, col-xl, col-xxl -->
+    <h1 class="display-1">Column Break</h1>
+    <br>
     <div class="row">
-      <div class="col-xxl">1</div>
-      <div class="col-xxl">2</div>
-      <div class="col-xxl">3</div>
+      <div class="col-6 col-sm-3">1</div>
+      <div class="col-6 col-sm-3">2</div>
+  
+      <!-- Force next columns to break to new line -->
+      <div class="w-100"></div>
+  
+      <div class="col-6 col-sm-3">3</div>
+      <div class="col-6 col-sm-3">4</div>
     </div>
+
+    <br>
 
     <div class="row">
-      <div class="col">1</div>
-      <div class="col">2</div>
-      <div class="col">3</div>
-      <div class="col">4</div>
-      <div class="col">5</div>
-      <div class="col">6</div>
-      <div class="col">7</div>
-      <div class="col">8</div>
-      <div class="col">9</div>
-      <div class="col">10</div>
-    </div>
+      <div class="col-6 col-sm-4">1</div>
+      <div class="col-6 col-sm-4">2</div>
+  
+      <!-- Force next columns to break to new line at md breakpoint and up -->
+      <div class="w-100 d-none d-md-block"></div>
 
-    <!-- Multiple col-* -->
-    <div class="row">
-      <div class="col">1</div>
-      <div class="col-6">2</div>
-      <div class="col">3</div>
+      <div class="col-6 col-sm-4">3</div>
+      <div class="col-6 col-sm-4">4</div>
     </div>
-    <div class="row">
-      <div class="col-xl-2 col-md col-sm-4">1</div>
-      <div class="col-xl-6 col-md-6 col-sm-4">2</div>
-      <div class="col-xl-4 col-md col-sm-4">3</div>
-    </div>
-
-    <!-- col-*-auto : Variable width content -->
-    <div class="row">
-      <div class="col-lg-2">1</div>
-      <div class="col-md-auto">2 Lorem ipsum dolor sit amet.</div>
-      <div class="col-lg-2">3</div>
-    </div>
-
-    <!-- Row Column : row-cols-* -->
-    <div class="row row-cols-4">
-      <div class="col">1</div>
-      <div class="col">2</div>
-      <div class="col">3</div>
-      <div class="col">4</div>
-    </div>
-
-    <div class="row row-cols-3">
-      <div class="col">1</div>
-      <div class="col">2</div>
-      <div class="col">3</div>
-      <div class="col">4</div>
-    </div>
-
-    <div class="row row-cols-auto">
-      <div class="col">1</div>
-      <div class="col">2</div>
-      <div class="col">3</div>
-      <div class="col">4</div>
-    </div>
-
-    <div class="row row-cols-4">
-      <div class="col">1</div>
-      <div class="col">2</div>
-      <div class="col-6">3</div>
-      <div class="col">4</div>
-    </div>
-
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-3">
-      <div class="col">1</div>
-      <div class="col">2</div>
-      <div class="col">3</div>
-      <div class="col">4</div>
-    </div>
-
   </div>
+
+  <br>
+  <br>
+
+  <!-- Ordering -->
+  <div class="container">
+    <h1 class="display-1">ordering</h1>
+    <br>
+    <div class="row">
+      <div class="col order-4">1</div>
+      <div class="col">2</div>
+      <div class="col order-1">3</div>
+      <div class="col order-2">4</div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col">1</div>
+      <div class="col order-last">2</div>
+      <div class="col">3</div>
+      <div class="col order-first">4</div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col order-md-4">1</div>
+      <div class="col order-md-3">2</div>
+      <div class="col order-md-1 order-sm-last">3</div>
+      <div class="col order-md-2">4</div>
+    </div>
+  </div>
+  
+  <br>
+  <br>
+
+  <!-- Offset -->
+  <div class="container">
+    <h1 class="display-1">Offset</h1>
+    <br>
+    <div class="row">
+      <div class="col-md-4">1</div>
+      <div class="col-md-4 offset-md-4">2</div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-4">1</div>
+      <div class="col-sm-4 offset-md-4">2</div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-lg-3 offset-lg-2 offset-md-3">1</div>
+      <div class="col-lg-3 offset-lg-4 offset-md-3">2</div>
+    </div>
+  </div>
+  </section>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
