@@ -1,0 +1,78 @@
+/* Global */
+.section-content {
+  padding: 4rem 0;
+}
+
+.divider
+{
+  width: 10%;
+  margin: 2rem auto;
+  border-top: 0.5rem solid rgb(255, 112, 3);
+}
+
+
+/******************** TOP SECTION ********************/
+#top {
+  background-image: url('../images/bg-top.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  position: relative;
+}
+
+#top .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+#top .divider {
+  width: 10%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-top: 2px solid #fff;
+}
+
+#top .welcome {
+  padding-right: 8rem;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  #top .welcome {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/*********** HEADER SECTION *************/
+
+#header #navTop .socials a img {
+  border-radius: 0.75rem;
+}
+
+#header #navPrimary {
+  background-color: #0e2d16;
+}
+
+#header #navPrimary .offcanvas {
+  width: 300px !important;
+}
+
+#header #navPrimary .offcanvas .mobile-menu a {
+  font-size: 1.1rem !important;
+}
+
+#header #navPrimary .offcanvas .mobile-menu a.active {
+  font-weight: bold !important;
+  color: #0e2d16;
+}
+
+#header #navPrimary .offcanvas .mobile-menu li {
+  padding-left: 0.75rem;
+  line-height: 1.75;
+}

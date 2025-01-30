@@ -11,8 +11,9 @@
 </head>
 <body>
   <header id="header" class="wrapper">
-    <div class="modal fade" id="ourModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="ourModalLabel" aria-hidden="true">
+    <div class="modal fade" id="ourModal" tabindex="-1" data-bs-backdrop="static" aria-labelledby="ourModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
+
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="ourModalLabel">Contact us!</h5>
@@ -24,6 +25,7 @@
                 <label for="yourName" class="form-label">Your name</label>
                 <input type="text" id="yourName" class="form-control" placeholder="Your name">
               </div>
+
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label for="yourPhone" class="form-label">Your phone</label>
@@ -82,7 +84,7 @@
       </div>
     </section>
 
-    <nav id="navPrimary" class="navbar navbar-expand-md navbar-dark">
+    <nav id="navPrimary" class="navbar navbar-expand-md navbar-dark sticky-top">
       <div class="container-xxl">
         <a class="navbar-brand d-block d-md-none" href="index.html">
           <img src="./assets/images/dummy-logo.png" alt="Logo" class="img-fluid">
@@ -94,7 +96,8 @@
               <a class="nav-link active" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" 
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Intro
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -126,11 +129,15 @@
           </ul>
         </div>
 
-        <button class="btn btn-outline-secondary d-block d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <button class="btn btn-outline-secondary d-block d-md-none" 
+        type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" 
+        aria-controls="offcanvasRight">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="offcanvas offcanvas-end d-block d-md-none" data-bs-scroll="true" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas offcanvas-end d-block d-md-none" 
+        data-bs-scroll="true" tabindex="-1" id="offcanvasRight" 
+        aria-labelledby="offcanvasRightLabel">
           <div class="offcanvas-header">
             <h5 class="offcanvasRightLabel">My second web</h5>
             <button class="btn-close text-reset" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
