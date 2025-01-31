@@ -1,6 +1,6 @@
 import requests
-import random
 from collections import Counter
+import secrets
 
 # 최근 로또 데이터 가져오기
 def get_lotto_numbers(draw_no):
@@ -17,7 +17,7 @@ latest_draw_no = 1156
 
 # 최근 당첨 번호 수집
 lotto_data = []
-for i in range(latest_draw_no, latest_draw_no - 200, -1):
+for i in range(latest_draw_no, latest_draw_no - 500, -1):
     numbers = get_lotto_numbers(i)
     if numbers:
         lotto_data.extend(numbers)
@@ -28,8 +28,10 @@ number_counts = Counter(lotto_data)
 # 가장 많이 나온 상위 12개 번호 선택
 top_numbers = [num for num, _ in number_counts.most_common(15)]
 
-# 상위 번호 중 6개 랜덤 선택
-statistical_lotto_numbers = sorted(random.sample(top_numbers, 6))
+for i in range(5):
+    # 상위 번호 중 6개 랜덤 선택
+    statistical_lotto_numbers = sorted(secrets.SystemRandom().sample(top_numbers, 6))
 
-# 생성된 통계 기반 로또 번호 출력
-print(statistical_lotto_numbers)
+    # 생성된 통계 기반 로또 번호 출력
+    print(statistical_lotto_numbers)    
+
