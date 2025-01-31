@@ -23,11 +23,30 @@ small {
   padding: 4rem 0;
 }
 
+/*
+요소의 상태 변화(예: 그림자 효과)가 0.5초 동안 지속되도록 설정.
+ease-in은 천천히 시작하고 빠르게 끝나는 애니메이션 효과를 의미.
+-webkit-transition은 웹킷 기반 브라우저(Chrome, Safari)에서도 동일한 효과를 적용하기 위한 설정.
+*/
 .shadow-box {
   -webkit-transition: 0.5s ease-in;
   transition: 0.5s ease-in;
 }
 
+/*
+box-shadow 속성: 요소에 그림자 효과를 추가하는 속성.
+  0 16px 24px 2px rgba(0, 0, 0, 0.14)
+    0: 가로 방향 이동 없음
+    16px: 세로 방향으로 16px 이동
+    24px: 블러(흐림) 정도
+    2px: 그림자 확산 정도
+    rgba(0, 0, 0, 0.14): 검은색 그림자, 투명도 14%
+  0 6px 30px 5px rgba(0, 0, 0, 0.12)
+    또 다른 그림자 계층 추가, 더 부드러운 효과 연출
+  0 8px 10px -5px rgba(0, 0, 0, 0.2)
+    작은 그림자로 입체감 강화
+-webkit-box-shadow: 웹킷 기반 브라우저(Chrome, Safari)에서도 동일한 효과 적용.
+*/
 .shadow-box:hover {
   -webkit-box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
