@@ -172,7 +172,7 @@
         <div class="navbar-collapse collapse" id="navPrimaryContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a href="#HOME" class="nav-link active" aria-current="page">Home</a>
+              <a href="#HOME" class="nav-link" aria-current="page">Home</a>
             </li>
             <!-- dropdown의 경우 클래스를 li에 직접 주어서 할 수 있음 
              부모에 dropdown
@@ -188,7 +188,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="page.html">Documents</a>
+              <a class="nav-link active" href="page.html">Documents</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="page.html">Gallery</a>
@@ -224,7 +224,7 @@
           </div>
           <div class="offcanvas-body">
             <ul class="list-unstyled mobile-menu">
-              <li><a href="index.html" class="text-decoration-none link-dark active">Home</a></li>
+              <li><a href="index.html" class="text-decoration-none link-dark">Home</a></li>
               <li>
                 <a href="page.html" class="text-decoration-none link-dark">Intro</a>
                 <ul class="list-unstyled ms-3">
@@ -232,7 +232,7 @@
                   <li><a href="page.html" class="text-decoration-none link-dark">Find us</a></li>
                 </ul>
               </li>
-              <li><a href="page.html" class="text-decoration-none link-dark">Documents</a></li>
+              <li><a href="page.html" class="text-decoration-none link-dark active">Documents</a></li>
               <li><a href="page.html" class="text-decoration-none link-dark">Gallery</a></li>
               <li><a href="page.html" class="text-decoration-none link-dark">Blog</a></li>
               <li><a href="page.html" class="text-decoration-none link-dark">Events</a></li>
@@ -248,52 +248,33 @@
     </nav>
   </header>
 
-  <section id="frontPrograms">
+  <section id="topBanner" class="mx-3" style="background-image: url(./assets/images/blog.jpg);">
+    <div class="section-content overlay d-flex justify-content-center align-items-center">
+      <div class="container">
+        <div class="row ">
+          <div class="col text-center">
+            <h1 class="display-4">Blog</h1>
+            <h4 class="fw-light">My amazing posts</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="blogContent">
     <div class="section-content">
       <div class="container-xxl">
-        <div class="row justify-content-center">
-          <div class="col-md-10 text-center">
-            <h1 class="mb-3 display-5">Our programs!</h1>
-            <p class="lead text-secondary">
-              Wow! Below are our amazing special programs.
-            </p>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+          <div class="col grid-item">
+            <div class="card mb-3">
+              <div class="row">
+                <div class="col-4" style="background-image: url('./assets/images/port1.jpg');"></div>
+                <div class="col-8">
+                  <!-- card는 가장 많이 사용하는 태그 중 하나로
+                   card-->
+                  <p>Post title</p>
+                  <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
 
-
-            <div class="row justify-content-center px-2">
-              <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-                <div class="program-item bg-white p-2 shadow-box">
-                  <a href="#" class="text-decoration-none">
-                    <img src="./assets/images/project-1.jpg" alt="Project 1" class="img-fluid">
-                  </a>
-
-                  <p class="mb-0 text-center">Program 1</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-                <div class="program-item bg-white p-2 shadow-box">
-                  <a href="#" class="text-decoration-none">
-                    <img src="./assets/images/project-2.jpg" alt="Project 1" class="img-fluid">
-                  </a>
-
-                  <p class="mb-0 text-center">Program 2</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-                <div class="program-item bg-white p-2 shadow-box">
-                  <a href="#" class="text-decoration-none">
-                    <img src="./assets/images/project-3.jpg" alt="Project 1" class="img-fluid">
-                  </a>
-
-                  <p class="mb-0 text-center">Program 3</p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-                <div class="program-item bg-white p-2 shadow-box">
-                  <a href="#" class="text-decoration-none">
-                    <img src="./assets/images/project-4.jpg" alt="Project 1" class="img-fluid">
-                  </a>
-
-                  <p class="mb-0 text-center">Program 4</p>
                 </div>
               </div>
             </div>
@@ -301,223 +282,7 @@
         </div>
       </div>
     </div>
-  </section>
-
-  <section id="frontInfos">
-    <div class="section-content">
-      <div class="container-xxl">
-        <h3 class="text-center mb-4">Our Infos ans How to Contact us</h3>
-        <div class="row w-75 mx-auto socials">
-          <div class="col-6 col-lg-3 mb-4 ">
-            <div class="card shadow-box">
-              <a href="tel:02-111-1111">
-                <!-- 
-                card-img를 사용시 이미지가 꽉차는 효과를 준다.
-                -->
-                <img src="./assets/images/icon-phone.png" alt="phone" class="card-img">
-              </a>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 mb-4 ">
-            <div class="card shadow-box">
-              <a href="#">
-                <!-- 
-                card-img를 사용시 이미지가 꽉차는 효과를 준다.
-                -->
-                <img src="./assets/images/icon-kakao-channel.png" alt="kakao" class="card-img">
-              </a>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 mb-4 ">
-            <div class="card shadow-box">
-              <a href="#">
-                <!-- 
-                card-img를 사용시 이미지가 꽉차는 효과를 준다.
-                -->
-                <img src="./assets/images/icon-facebook.png" alt="Facebook" class="card-img">
-              </a>
-            </div>
-          </div>
-          <div class="col-6 col-lg-3 mb-4 ">
-            <div class="card shadow-box">
-              <a href="#">
-                <!-- 
-                card-img를 사용시 이미지가 꽉차는 효과를 준다.
-                -->
-                <img src="./assets/images/icon-youtube.png" alt="Youtube" class="card-img">
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="row infos justify-content-center">
-          <div class="col-md-4">
-            <div class="card card-body shadow-sm text-center ">
-              <div class="card-title">
-                <i class="fa-solid fa-location-dot fa-4x"></i>
-                <!-- Header 태그는 기본적으로 margin-bottom을 가진다. -->
-                <h4 class="mb-0">How to find</h4>
-                <hr class="hr-black">
-              </div>
-              <div class="card-body">
-                <p class="fw-light">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo architecto similique cupiditate
-                  voluptas et fugit recusandae repellendus consequatur, in fuga!
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card card-body shadow-sm text-center ">
-              <div class="card-title">
-                <i class="fa-solid fa-clock fa-4x"></i>
-                <!-- Header 태그는 기본적으로 margin-bottom을 가진다. -->
-                <h4 class="mb-0">Business hour</h4>
-                <hr class="hr-black">
-              </div>
-              <div class="card-body">
-                <p class="fw-light">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo architecto similique cupiditate
-                  voluptas et fugit recusandae repellendus consequatur, in fuga!
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="frontLatest">
-    <div class="section-content">
-      <div class="container-xxl">
-        <h3 class="text-center mb-0">New Articles</h3>
-        <p class="text-center lead">Meet out New Articles</p>
-        <div class="row">
-          <div class="col-md-6 mb-5 latest-posts">
-            <div class="latest-posts-header mb-4">
-              <h4>Latest posts</h4>
-            </div>
-
-            <div class="card latest-post">
-              <div class="row g-0 align-items-center">
-                <!-- 
-                이미지가 꽉차게 안 들어가는 경우
-                img 태그를 쓰기 보다는 background-image로 넣는 것이 더 좋다.-->
-                <div class="col-md-4 latest-post-featured" style="background-image: url('./assets/images/port1.jpg');">
-                </div>
-                <div class="col-md-8 latest-post-text">
-                  <div class="card-body">
-                    <h4 class="card-title">Sample Post</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo architecto
-                      similique cupiditate
-                      voluptas et fugit recusandae repellendus consequatur, in fuga!</p>
-                    <p class="card-text">2021-8-20</p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-            <div class="card latest-post">
-              <div class="row g-0 align-items-center">
-                <!-- 
-                이미지가 꽉차게 안 들어가는 경우
-                img 태그를 쓰기 보다는 background-image로 넣는 것이 더 좋다.-->
-                <div class="col-md-4 latest-post-featured" style="background-image: url('./assets/images/port2.jpg');">
-                </div>
-                <div class="col-md-8 latest-post-text">
-                  <div class="card-body">
-                    <h4 class="card-title">Test Post</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo architecto
-                      similique cupiditate
-                      voluptas et fugit recusandae repellendus consequatur, in fuga!</p>
-                    <p class="card-text">2021-8-20</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="text-center">
-              <a href="" class="btn btn-outline-primary">View more posts</a>
-            </div>
-          </div>
-          <div class="col-md-6 mb-5 latest-posts">
-            <div class="latest-posts-header mb-4">
-              <h4>Latest reviews</h4>
-            </div>
-
-            <div class="card latest-post">
-              <div class="row g-0 align-items-center">
-                <!-- 
-                이미지가 꽉차게 안 들어가는 경우
-                img 태그를 쓰기 보다는 background-image로 넣는 것이 더 좋다.-->
-                <div class="col-md-4 latest-post-featured" style="background-image: url('./assets/images/port3.jpg');">
-                </div>
-                <div class="col-md-8 latest-post-text">
-                  <div class="card-body">
-                    <h4 class="card-title">Good review</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo architecto
-                      similique cupiditate
-                      voluptas et fugit recusandae repellendus consequatur, in fuga!</p>
-                    <p class="card-text">2021-8-20</p>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-            <div class="card latest-post">
-              <div class="row g-0 align-items-center">
-                <!-- 
-                이미지가 꽉차게 안 들어가는 경우
-                img 태그를 쓰기 보다는 background-image로 넣는 것이 더 좋다.-->
-                <div class="col-md-4 latest-post-featured" style="background-image: url('./assets/images/port4.jpg');">
-                </div>
-                <div class="col-md-8 latest-post-text">
-                  <div class="card-body">
-                    <h4 class="card-title">Wonderful!!</h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo architecto
-                      similique cupiditate
-                      voluptas et fugit recusandae repellendus consequatur, in fuga!</p>
-                    <p class="card-text">2021-8-20</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="text-center">
-              <a href="fas" class="btn btn-outline-primary">View more reviews</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="frontMap">
-    <div class="container-fluid mb-3 py-3">
-      <!-- map id 를 넣어서 나중에 kakao map을 넣어보자 -->
-      <div id="map">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 offset-md-8 col-10 contact-us">
-              <!-- p 태그는 기본적으로 마진을 가지고 있다. -->
-              <p class="mb-0">
-                <i class="fas fa-solid fa-square-phone"></i>
-                <a href="tel:02-111-1111" class="text-decoration-none link-success">02-111-1111</a>
-                <br>
-                <i class="fas fa-home"></i> 11-1111 Gil-dong Jung-gu Seoul Korea
-                <br>
-                <a target="_blank" href="#" class="text-decoration-none link-success">
-                  <i class="fas fa-hand-point-right"></i> Go to Kakao Place
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+  </main>
 
   <footer id="footer">
     <div class="section-content">
@@ -532,7 +297,8 @@
           </div>
           <div class="col-md-9">
             <p><strong> My BS5 web</strong> | CEO Name: Gil-dong Hong | Business No: 111-11-11111 | TEL: 02-111-1111
-              <br>Address: 11-111 Gil-dong Jung-gu Seoul Korea</p>
+              <br>Address: 11-111 Gil-dong Jung-gu Seoul Korea
+            </p>
             <a href="tel:02-111-1111">
               <img src="./assets/images/icon-phone.png" alt="phone" class="shadow-box" width="48px">
             </a>
@@ -550,9 +316,10 @@
             </a>
             <br>
             <span class="copyright">
-              Copyright © My BS5 web - Amazing website. 2025. All rights Reserved. | Designed by <span class="text-warning">CodingDIY</span>
+              Copyright © My BS5 web - Amazing website. 2025. All rights Reserved. | Designed by <span
+                class="text-warning">CodingDIY</span>
             </span>
-            
+
 
 
 

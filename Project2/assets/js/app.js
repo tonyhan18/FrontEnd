@@ -3,6 +3,7 @@ var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
   return new bootstrap.Tooltip(tooltipTriggerEl)
 })
 
+/* 카카오 맵 적용 부분 */
 const mapDiv = document.querySelector('#map')
 const options = {
   center: new daum.maps.LatLng(37.57599184507025, 126.9769613271878),
