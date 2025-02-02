@@ -264,17 +264,177 @@
   <main id="blogContent">
     <div class="section-content">
       <div class="container-xxl">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 ">
           <div class="col grid-item">
             <div class="card mb-3">
-              <div class="row">
-                <div class="col-4" style="background-image: url('./assets/images/port1.jpg');"></div>
-                <div class="col-8">
+              <!-- post-featured와 post-text는 부트스트랩 클래스는 아님-->
+              <!-- row 하위 col은 기본 gutters가 설정되어 있음 -->
+              <div class="row g-0">
+                <div class="col-4 post-featured" style="background-image: url('./assets/images/port1.jpg');"></div>
+                <div class="col-8 post-text d-flex flex-column justify-content-center align-items-stretch">
                   <!-- card는 가장 많이 사용하는 태그 중 하나로
-                   card-->
-                  <p>Post title</p>
-                  <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>
-
+                  card-->
+                  <div class="card-body">
+                    <h5 class="card-title mb-3">
+                      <a href="p_post.html" class="text-decoration-none">
+                        Post title
+                      </a>
+                    </h5>
+                    <!-- 
+                    Text Truncate를 해서 카드와 같은 성분에 요소가 적절히 조절될 수 있도록 만들 수 있음 
+                    -->
+                    <p class="card-text text-truncate fw-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <div class="card-footer border-0">
+                    <small class="text-muted fw-light">
+                      <img src="./assets/images/avatar.png" alt="Avatar" class="img-avatar"> CodingDIY | 2021-8-24 | Category1
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col grid-item">
+            <div class="card mb-3">
+              <!-- post-featured와 post-text는 부트스트랩 클래스는 아님-->
+              <!-- row 하위 col은 기본 gutters가 설정되어 있음 -->
+              <div class="row g-0">
+                <div class="col-4 post-featured" style="background-image: url('./assets/images/port2.jpg');"></div>
+                <div class="col-8 post-text d-flex flex-column justify-content-center align-items-stretch">
+                  <!-- card는 가장 많이 사용하는 태그 중 하나로
+                  card-->
+                  <div class="card-body">
+                    <h5 class="card-title mb-3">
+                      <a href="p_post.html" class="text-decoration-none">
+                        Post title
+                      </a>
+                    </h5>
+                    <!-- 
+                    Text Truncate를 해서 카드와 같은 성분에 요소가 적절히 조절될 수 있도록 만들 수 있음 
+                    -->
+                    <p class="card-text text-truncate fw-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <div class="card-footer border-0">
+                    <small class="text-muted fw-light">
+                      <img src="./assets/images/avatar.png" alt="Avatar" class="img-avatar"> CodingDIY | 2021-8-24 | Category1
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col grid-item">
+            <div class="card mb-3">
+              <!-- post-featured와 post-text는 부트스트랩 클래스는 아님-->
+              <!-- row 하위 col은 기본 gutters가 설정되어 있음 -->
+              <div class="row g-0">
+                <div class="col-4 post-featured" style="background-image: url('./assets/images/port3.jpg');"></div>
+                <div class="col-8 post-text d-flex flex-column justify-content-center align-items-stretch">
+                  <!-- card는 가장 많이 사용하는 태그 중 하나로
+                  card-->
+                  <div class="card-body">
+                    <h5 class="card-title mb-3">
+                      <a href="p_post.html" class="text-decoration-none">
+                        Post title
+                      </a>
+                    </h5>
+                    <!-- 
+                    Text Truncate를 해서 카드와 같은 성분에 요소가 적절히 조절될 수 있도록 만들 수 있음 
+                    -->
+                    <p class="card-text text-truncate fw-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <div class="card-footer border-0">
+                    <small class="text-muted fw-light">
+                      <img src="./assets/images/avatar.png" alt="Avatar" class="img-avatar"> CodingDIY | 2021-8-24 | Category1
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col grid-item">
+            <div class="card mb-3">
+              <!-- post-featured와 post-text는 부트스트랩 클래스는 아님-->
+              <!-- row 하위 col은 기본 gutters가 설정되어 있음 -->
+              <div class="row g-0">
+                <div class="col-4 post-featured" style="background-image: url('./assets/images/port4.jpg');"></div>
+                <div class="col-8 post-text d-flex flex-column justify-content-center align-items-stretch">
+                  <!-- card는 가장 많이 사용하는 태그 중 하나로
+                  card-->
+                  <div class="card-body">
+                    <h5 class="card-title mb-3">
+                      <a href="p_post.html" class="text-decoration-none">
+                        Post title
+                      </a>
+                    </h5>
+                    <!-- 
+                    Text Truncate를 해서 카드와 같은 성분에 요소가 적절히 조절될 수 있도록 만들 수 있음 
+                    -->
+                    <p class="card-text text-truncate fw-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <div class="card-footer border-0">
+                    <small class="text-muted fw-light">
+                      <img src="./assets/images/avatar.png" alt="Avatar" class="img-avatar"> CodingDIY | 2021-8-24 | Category1
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col grid-item">
+            <div class="card mb-3">
+              <!-- post-featured와 post-text는 부트스트랩 클래스는 아님-->
+              <!-- row 하위 col은 기본 gutters가 설정되어 있음 -->
+              <div class="row g-0">
+                <div class="col-4 post-featured" style="background-image: url('./assets/images/port5.jpg');"></div>
+                <div class="col-8 post-text d-flex flex-column justify-content-center align-items-stretch">
+                  <!-- card는 가장 많이 사용하는 태그 중 하나로
+                  card-->
+                  <div class="card-body">
+                    <h5 class="card-title mb-3">
+                      <a href="p_post.html" class="text-decoration-none">
+                        Post title
+                      </a>
+                    </h5>
+                    <!-- 
+                    Text Truncate를 해서 카드와 같은 성분에 요소가 적절히 조절될 수 있도록 만들 수 있음 
+                    -->
+                    <p class="card-text text-truncate fw-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <div class="card-footer border-0">
+                    <small class="text-muted fw-light">
+                      <img src="./assets/images/avatar.png" alt="Avatar" class="img-avatar"> CodingDIY | 2021-8-24 | Category1
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col grid-item">
+            <div class="card mb-3">
+              <!-- post-featured와 post-text는 부트스트랩 클래스는 아님-->
+              <!-- row 하위 col은 기본 gutters가 설정되어 있음 -->
+              <div class="row g-0">
+                <div class="col-4 post-featured" style="background-image: url('./assets/images/port6.jpg');"></div>
+                <div class="col-8 post-text d-flex flex-column justify-content-center align-items-stretch">
+                  <!-- card는 가장 많이 사용하는 태그 중 하나로
+                  card-->
+                  <div class="card-body">
+                    <h5 class="card-title mb-3">
+                      <a href="p_post.html" class="text-decoration-none">
+                        Post title
+                      </a>
+                    </h5>
+                    <!-- 
+                    Text Truncate를 해서 카드와 같은 성분에 요소가 적절히 조절될 수 있도록 만들 수 있음 
+                    -->
+                    <p class="card-text text-truncate fw-light">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                  <div class="card-footer border-0">
+                    <small class="text-muted fw-light">
+                      <img src="./assets/images/avatar.png" alt="Avatar" class="img-avatar"> CodingDIY | 2021-8-24 | Category1
+                    </small>
+                  </div>
                 </div>
               </div>
             </div>
