@@ -1,0 +1,59 @@
+﻿@inherits LayoutComponentBase
+@inject NavigationManager Navigation
+@inject DialogService DialogService
+@inject NotificationService NotificationService
+@inject TooltipService TooltipService
+@inject ContextMenuService ContextMenuService
+
+<RadzenComponents />
+<RadzenDialog />
+<RadzenNotification />
+<RadzenTooltip />
+<RadzenContextMenu />
+
+<RadzenSidebarToggle Click="ToggleSidebar" Style="margin:10px;" />
+
+<RadzenSidebar @bind-Expanded="@isSidebarExpanded">
+    <RadzenPanelMenu>
+        <RadzenPanelMenuItem Text="홈" Path="/" Icon="home" />
+        <RadzenPanelMenuItem Text="대시보드" Path="/dashboard" Icon="dashboard" />
+        <RadzenPanelMenuItem Text="설정" Path="/Data" Icon="settings" />
+    </RadzenPanelMenu>
+</RadzenSidebar>
+
+<RadzenBody>
+    @Body
+</RadzenBody>
+
+
+@code {
+    private bool isSidebarExpanded = true;
+
+    void ToggleSidebar()
+    {
+        isSidebarExpanded = !isSidebarExpanded;
+    }
+}
+
+
+@* <div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4">
+            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div> *@

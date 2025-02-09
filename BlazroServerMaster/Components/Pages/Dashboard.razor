@@ -1,0 +1,30 @@
+﻿@page "/dashboard"
+
+@inject DialogService DialogService
+@inject NotificationService NotificationService
+
+<RadzenButton Text="Open Dialog" Click="ShowDialog" />
+<RadzenButton Text="Show Notification" Click="ShowNotification" />
+
+@code {
+    void ShowDialog()
+    {
+        DialogService.Open("Dialog Title", ds =>
+    @<RadzenCard>
+        <h3>Welcome to Radzen</h3>
+        <RadzenButton Text="Close" Click="()=> DialogService.Close()" />
+    </RadzenCard>
+        );
+    }
+
+    void ShowNotification()
+    {
+        NotificationService.Notify(new NotificationMessage
+            {
+                Severity = NotificationSeverity.Success,
+                Summary = "Success",
+                Detail = "Radzen is working!",
+                Duration = 4000
+            });
+    }
+}

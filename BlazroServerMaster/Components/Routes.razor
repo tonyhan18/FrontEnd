@@ -1,0 +1,19 @@
+﻿@using BlazroServerMaster.Components.Account.Shared
+
+<RadzenLayout>
+    <CascadingAuthenticationState>
+        <Router AppAssembly="@typeof(Program).Assembly">
+            <Found Context="routeData">
+                <AuthorizeRouteView RouteData="@routeData" DefaultLayout="@typeof(Layout.MainLayout)">
+                    <NotAuthorized>
+                        <RedirectToLogin />
+                    </NotAuthorized>
+                </AuthorizeRouteView>
+                <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+            </Found>
+            <NotFound>
+                <h3>페이지를 찾을 수 없습니다.</h3>
+            </NotFound>
+        </Router>
+    </CascadingAuthenticationState>
+</RadzenLayout>

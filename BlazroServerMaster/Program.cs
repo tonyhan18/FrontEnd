@@ -1,4 +1,5 @@
 using BlazroServerMaster.Components;
+using BlazroServerMaster.Components.Services;
 using BlazroServerMaster.Components.Account;
 using BlazroServerMaster.Data;
 using BlazroServerMaster.Interfaces;
@@ -7,6 +8,7 @@ using BlazroServerMaster.Services;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Radzen;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +28,19 @@ builder.Services.AddAuthentication(options =>
     })
     .AddIdentityCookies();
 
+
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+
+// Radzen 서비스 등록
+builder.Services.AddRadzenComponents();
+builder.Services.AddScoped<DialogService>();
+builder.Services.AddScoped<NotificationService>();
+builder.Services.AddScoped<TooltipService>();
+builder.Services.AddScoped<ContextMenuService>();
+
+
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
@@ -40,6 +55,12 @@ builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSe
 
 builder.Services.AddDbContext<BlazorServerDbContext>();
 builder.Services.AddScoped<IDatabase<GangnamguPopulation>, GangnamguPopulationService>();
+
+/* FrontEnd Services */
+// Add Radzen.Blazor services
+
+builder.Services.AddScoped<ModalService>();
+
 
 var app = builder.Build();
 

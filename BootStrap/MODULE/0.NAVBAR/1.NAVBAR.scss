@@ -3,15 +3,17 @@
   padding: 4rem 0;
 }
 
-.divider {
+.divider
+{
   width: 10%;
   margin: 2rem auto;
   border-top: 0.5rem solid rgb(255, 112, 3);
 }
 
+
 /******************** TOP SECTION ********************/
 #top {
-  background-image: url("../images/bg-top.jpg");
+  background-image: url('../images/bg-top.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,7 +48,9 @@
     padding-right: 1rem;
   }
 }
+
 /*********** HEADER SECTION *************/
+
 #header #navTop .socials a img {
   border-radius: 0.75rem;
 }
@@ -71,4 +75,4 @@
 #header #navPrimary .offcanvas .mobile-menu li {
   padding-left: 0.75rem;
   line-height: 1.75;
-}/*# sourceMappingURL=1.NAVBAR.css.map */
+}

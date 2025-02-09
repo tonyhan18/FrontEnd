@@ -15,12 +15,17 @@ namespace BlazroServerMaster.Services
             this._context = context;
         }
 
-        public void Create(GangnamguPopulation entity)
+        private void isDbNull()
         {
-            if (_context?.GangnamguPopulations == null) 
+            if (_context?.GangnamguPopulations == null)
             {
                 throw new NullReferenceException();
             }
+        }
+
+        public void Create(GangnamguPopulation entity)
+        {
+            isDbNull();
 
             this._context.GangnamguPopulations.Add(entity);
             this._context?.SaveChanges();        
@@ -28,10 +33,7 @@ namespace BlazroServerMaster.Services
 
         public void Delete(int? id)
         {
-            if (_context?.GangnamguPopulations == null)
-            {
-                throw new NullReferenceException();
-            }
+            isDbNull();
 
             var validData = this._context.GangnamguPopulations.Find(id);
 
@@ -44,15 +46,18 @@ namespace BlazroServerMaster.Services
 
         public async Task<List<GangnamguPopulation>> GetAsync()
         {
+            isDbNull();
             return await this._context.GangnamguPopulations.ToListAsync();
         }
 
         public GangnamguPopulation GetDetail(int? id)
         {
-            if (id == null || _context?.GangnamguPopulations == null)
+            isDbNull();
+            if (id == null)
             {
                 throw new NullReferenceException();
             }
+
 
             var validData = this._context.GangnamguPopulations.FirstOrDefault(x => x.Id == id);
 
@@ -68,7 +73,8 @@ namespace BlazroServerMaster.Services
 
         public void Update(int? id, GangnamguPopulation entity)
         {
-            if (id == null || _context?.GangnamguPopulations == null)
+            isDbNull();
+            if (id == null)
             {
                 throw new NullReferenceException();
             }
