@@ -11,6 +11,21 @@ Currently, two official plugins are available:
 ```bash
 npm i @reduxjs/toolkit react-redux
 ```
+# Redux Thunk 사용하기
+
+- 준비물
+```bash
+npm install -D json-server
+# 간단한 테스트용 서버
+
+npm install axios
+# 서버에 REST API 쏘는 용도
+```
+
+- 서버 실행시
+```bash
+npx json-server server/db.json
+```
 
 ## Expanding the ESLint configuration
 

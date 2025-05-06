@@ -3,6 +3,9 @@ import Title from './components/Title';
 import Controls from './components/Controls';
 import TodoList from './components/TodoList';
 import { ToDoProvider } from './context';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchTodos } from './store/todoSlice';
 
 
 /**
@@ -11,7 +14,10 @@ import { ToDoProvider } from './context';
  * 이를 개선한 것이 Context API와 Reducer이다. 
  */
 function App() {
-  
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchTodos());
+  },[])
   return (
     <ToDoProvider>
       <Layout>

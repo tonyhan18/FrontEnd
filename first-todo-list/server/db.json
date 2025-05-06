@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": "1",
+      "text": "Learn JavaScript234",
+      "completed": true
+    },
+    {
+      "id": "2",
+      "text": "Learn React123",
+      "completed": false
+    },
+    {
+      "id": "1746511862285",
+      "text": "asdasd123",
+      "completed": false
+    },
+    {
+      "id": "1746512226958",
+      "text": "dfgdfg",
+      "completed": false
+    }
+  ]
+}

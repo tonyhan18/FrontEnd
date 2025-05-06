@@ -3,7 +3,7 @@ import './Controls.css'
 import { TodoContext } from '../context';
 import { SET_FILTER } from '../reducer';
 import { useSelector, useDispatch } from 'react-redux';
-import { addTodo } from '../store/todoSlice';
+import { createTodo, setFilter } from '../store/todoSlice';
 
 /**
  * Context를 사용함으로써 기존에 컴포넌트 별로 인자를 내려주었던 것을
@@ -24,11 +24,11 @@ function Controls() {
         setText(e.target.value);
     };
     const handleSubmit = () => {
-        dispatch({type: ADD_TODO, payload: text});
+        dispatch(createTodo(text));
         setText("");
     };
     const handleChangeFilterType = (e) => {
-        dispatch({type: SET_FILTER, payload: e.target.value});
+        dispatch(setFilter(e.target.value));
     }
     return <div className="controls">
         <input type="text" 
