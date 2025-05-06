@@ -1,5 +1,8 @@
 import './TodoItem.css';
 
+/**
+ * 학습용으로 남겨놓은 초기 파일이기 때문에 신경 안써도 됩니다.
+ */
 function TodoItem() {
     return  (
         <div className="todo-item">
