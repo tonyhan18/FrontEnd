@@ -1,4 +1,4 @@
-import './TodoList.css'
+import styles from './TodoList.module.css'
 import TodoItems from './TodoItems';
 import { useContext } from 'react';
 import { TodoContext } from '../context';
@@ -31,17 +31,17 @@ function TodoList() {
     const isAllCompleted = 
     filteredList.length > 0 && filteredList.every((item)=>item.completed);
     return (
-        <div className="todo-list">
-            <div className="todo-header">
+        <div className={styles["todo-list"]}>
+            <div className={styles["todo-header"]}>
                 <input type="checkbox" 
-                        className='todo-checkbox' 
+                        className={styles['todo-checkbox']}
                         checked={isAllCompleted} 
                         onChange={handleToogleAll}
                 />
-                <p className='todo-header-text'>할 일</p>
+                <p className={styles['todo-header-text']}>할 일</p>
                 {
                     completedCount > 0 && (
-                        <button className='todo-header-button' 
+                        <button className={styles['todo-header-button']}
                                 onClick={handleDeleteCompleted}
                         >
                             {completedCount}개 선택 삭제

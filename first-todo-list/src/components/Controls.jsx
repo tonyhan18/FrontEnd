@@ -1,5 +1,5 @@
 import { useContext, useState } from 'react';
-import './Controls.css'
+import styles from './Controls.module.css'
 import { TodoContext } from '../context';
 import { ADD_TODO, SET_FILTER } from '../reducer';
 
@@ -24,14 +24,14 @@ function Controls() {
     const handleChangeFilterType = (e) => {
         dispatch({type: SET_FILTER, payload: e.target.value});
     }
-    return <div className="controls">
+    return <div className={styles.controls}>
         <input type="text" 
-                className="input" 
+                className={styles.input}
                 value={text} 
                 onChange={handleChange} />
-        <button className="button" 
+        <button className={styles.button}
                 onClick={handleSubmit}>추가</button>
-        <select className="select" 
+        <select className={styles.select}
                 value={state.filterType} 
                 onChange={handleChangeFilterType}>
             <option value="ALL">전체</option>
