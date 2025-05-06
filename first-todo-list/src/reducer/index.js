@@ -6,6 +6,16 @@ export const TOGGLE_TODO_ALL = "TOGGLE_TODO_ALL";
 export const DELETE_TODO_COMPLETED = "DELETE_TODO_COMPLETED";
 export const SET_FILTER = "SET_FILTER";
 
+export const init = () => {
+  const savedTodo = JSON.parse(window.localStorage.getItem("TODO")) || [];
+  const savedID = JSON.parse(window.localStorage.getItem("ID")) || 0;
+  return {
+    list: savedTodo,
+    id: savedID ? Number(savedID) : 0,
+    filterType: "ALL",
+  }
+}
+
 export const initialState = {
   list: [],
   id: 0,
@@ -19,7 +29,7 @@ export const reducer = (state, action) => {
         ...state,
         list: state.list.concat({
           id: state.id +1,
-          text: action.paylod,
+          text: action.payload,
           completed: false,
         }),
         id: state.id + 1,
@@ -29,8 +39,8 @@ export const reducer = (state, action) => {
       return {
         ...state,
         list: state.list.map(item=>{
-          if(item.id===id){
-            return {...item, text};
+          if(item.id===action.payload.id){
+            return {...item, text: action.payload.text};
           }
           return item;
         }),
@@ -44,7 +54,7 @@ export const reducer = (state, action) => {
     case TOGGLE_TODO:
       return {
         ...state,
-        list: state.list.map( item=> {
+        list: state.list.map((item) => {
           if(item.id === action.payload){
             return {...item, completed: !item.completed}
           }
@@ -54,7 +64,7 @@ export const reducer = (state, action) => {
     case TOGGLE_TODO_ALL:
       return {
         ...state,
-        list: state.list.map(item=> ({...item, completed: flag})),
+        list: state.list.map((item)=> ({...item, completed: action.payload})),
       };
     case DELETE_TODO_COMPLETED:
       return {

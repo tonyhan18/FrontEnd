@@ -9,9 +9,7 @@ function TodoList({data,
                     onUpdate,
                 }) 
 {
-    // 전체 체크박스의 상태를 관리하는 변수 - 단, data.length가 0이 아닐때만 체크박스의 상태를 관리함
     const isAllCompleted = data.length && data.every((item)=>item.completed);
-    // 완료된 항목의 개수를 세는 변수
     const completedCount = data.filter(item=>item.completed).length
     return (
         <div className="todo-list">
@@ -36,6 +34,7 @@ function TodoList({data,
                 {
                     data.map((item)=>(
                     <TodoItems 
+                        key={item.id}
                         id={item.id}
                         text={item.text} 
                         completed={item.completed} 
