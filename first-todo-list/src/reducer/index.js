@@ -6,6 +6,7 @@ export const TOGGLE_TODO_ALL = "TOGGLE_TODO_ALL";
 export const DELETE_TODO_COMPLETED = "DELETE_TODO_COMPLETED";
 export const SET_FILTER = "SET_FILTER";
 
+// init 함수는 초기 상태를 설정하는 함수이다.
 export const init = () => {
   const savedTodo = JSON.parse(window.localStorage.getItem("TODO")) || [];
   const savedID = JSON.parse(window.localStorage.getItem("ID")) || 0;
@@ -16,6 +17,9 @@ export const init = () => {
   }
 }
 
+// initialState는 초기 상태를 설정하는 객체이다. useReducer의 변수에 처음 들어가는 값이다
+// list : []는 할 일 목록을 저장하는 배열이다.
+// 이렇게 list로 관리하는 이유는 데이터 구조화, 확장성, 상태 관리의 일관성을 위해서이다.
 export const initialState = {
   list: [],
   id: 0,
