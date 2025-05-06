@@ -23,3 +23,35 @@ git reset --hard <commit-hash>
 # 3. GitHub 원격 저장소에도 강제로 덮어쓰기
 git push origin HEAD --force
 ```
+
+## 잘 못 만든 git branch 삭제하기
+1. 로컬 브랜치 삭제
+```bash
+git branch -d 브랜치이름
+```
+-d 옵션은 브랜치를 삭제하기 전에 병합 여부를 확인합니다. 병합되지 않은 브랜치는 삭제되지 않습니다.
+
+병합되지 않은 브랜치를 강제로 삭제하려면:
+```bash
+git branch -D 브랜치이름
+```
+
+2. 원격 브랜치 삭제
+원격 저장소에서 특정 브랜치를 삭제합니다.
+
+```bash
+git push origin --delete 브랜치이름
+```
+
+3. 삭제된 브랜치 확인
+로컬 브랜치 목록 확인:
+
+```bash
+git branch
+```
+
+원격 브랜치 목록 확인:
+
+```bash
+git branch -r
+```
